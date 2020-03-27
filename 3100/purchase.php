@@ -1,5 +1,5 @@
 <html>
-<head><title>login</title></head>
+<head><title>purchase</title></head>
 <body>
 
 <form action="shoppingcart.php" method="post">
