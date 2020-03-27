@@ -7,7 +7,7 @@
 <body>
 
 	<div id="frame">
-		<form action="login.php" method="post">
+		<form action="process.php" method="post">
 			<p>
 				Username: <input name="username" "id="username" type="text">
 			</p>
