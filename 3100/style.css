@@ -8,6 +8,13 @@ body{
 	margin: 150px;
 	background: white;
 }
+#frame2{
+	border: solid black 2px;
+	width: 15%;
+	border-radius: 20px;
+	margin: 100px;
+	background: white;
+}
 #button{
 		color: #fff;
 		background: #6495ED;
