@@ -4,7 +4,7 @@
 <div id="joinrm">
 		<form action="process.php" method="post">
 			<p>
-        			Please enter room number and password(if any)
+        			Please enter room number and password(if any)<br>
 				Room ID: <input name="rid" id="rid" type="text">
 			</p>
 			<p>
