@@ -9,10 +9,10 @@
 	<div id="frame">
 		<form action="login.php" method="post">
 			<p>
-				Username: <input name="name" "id="name" type="text">
+				Username: <input name="username" "id="username" type="text">
 			</p>
 			<p>
-				Password: <input name="id" id="password" type="password">
+				Password: <input name="password" id="password" type="password">
 			</p>
 			<p>
 				<input type="submit" id="button" value="Login">
