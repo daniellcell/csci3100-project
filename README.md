@@ -1,1 +1,9 @@
 # csci3100-project
+
+1. Download WampServer (for Windows) and all the files
+2. Run WampServer64, make sure the server is running (green icon in notification bar)
+3. Create a folder, "3100", under wamp64\www\
+4. Put all php files into wamp64\www\3100\
+5. Open your browser, type localhost/phpmyadmin/
+6. Import login.sql into localhost database
+7. Modify any php files you want and type localhost/3100/xxx.php in your browser to view changes. 
