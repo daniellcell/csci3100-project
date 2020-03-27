@@ -19,7 +19,7 @@
 	$result = mysqli_query($con,"select * from users where username = '$username' and password = '$password'")
 				or die("Failed to connect mySQL ".mysqli_error($con));
 	$row = mysqli_fetch_array($result);
-	if ($row['username'] == $username && $row['password'] == $password){
+	if ($row['username'] == $username && $row['password'] == $password && $row['username'] != ''){
 		echo "Success! Welcome User ".$row['username'];
 	} else{
 		echo "Wrong Username/Password";
