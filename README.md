@@ -6,4 +6,4 @@
 4. Put all php files into wamp64\www\3100\
 5. Open your browser, type localhost/phpmyadmin/
 6. Import login.sql into localhost database
-7. Modify any php files you want and type localhost/3100/xxx.php in your browser to view changes. 
+7. Modify any php or css files you want and type localhost/3100/xxx.php in your browser to view changes. 
