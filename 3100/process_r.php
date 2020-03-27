@@ -32,12 +32,8 @@
 	} elseif ($password == '') {
 		echo "Empty password";
 		echo '<form action="register.php" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
-	} else {
-			$selectsql = mysqli_query($con, "SELECT MAX(id) AS max FROM users;");
-			$selectmax = mysqli_fetch_array($selectsql);
-			$maxid = $selectmax['max'];
-			
-			$sql = "INSERT INTO users (id, username, password) VALUES ('$maxid'+1, '$username', '$password')";
+	} else {			
+			$sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
 			if (mysqli_query($con, $sql) === TRUE) {
 				echo "Success! Welcome New User ".$username;
 			echo '<form action="index.php" method="post"> <input type="submit" id="button" value="Return to Index"> </form>';
