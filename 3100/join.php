@@ -1,3 +1,6 @@
+<html>
+<head><title>JoinRoom</title></head>
+<body>
 <div id="joinrm">
 		<form action="process.php" method="post">
 			<p>
@@ -18,4 +21,6 @@
     
     echo "Welcome to room" . $rid . "<br>"
     ?>
-	</div>
+</div>
+</body>
+</html>
