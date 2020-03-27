@@ -1,5 +1,5 @@
 <html>
-<head><title>JoinRoom</title></head>
+<head><title>Room</title></head>
 <body>
     <?php
           $rid = $_POST['rid'];
