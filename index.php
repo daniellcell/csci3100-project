@@ -2,6 +2,7 @@
 
 <head>
 <title>index</title>
+<link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
