@@ -27,6 +27,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `users`
 --
+CREATE DATABASE login;
+USE login;
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
