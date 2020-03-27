@@ -1,5 +1,5 @@
 <html>
-<head><title>login</title></head>
+<head><title>game</title></head>
 <body>
 
 
