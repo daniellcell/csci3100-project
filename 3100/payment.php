@@ -1,5 +1,5 @@
 <html>
-<head><title>login</title></head>
+<head><title>payment</title></head>
 <body>
 
 <!--The page for payment. -->
