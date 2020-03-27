@@ -6,7 +6,7 @@
 	$con=mysqli_connect("localhost","root","");
 	if (mysqli_connect_errno($con)) 
 	{ 
-		echo "Failed to connect SQL" . mysqli_connect_error(); 
+		echo "Failed to connect mySQL" . mysqli_connect_error(); 
 	} 
 
 	$username = stripcslashes($username);
@@ -17,7 +17,7 @@
 	mysqli_select_db($con,"login");
 	
 	$result = mysqli_query($con,"select * from users where username = '$username' and password = '$password'")
-				or die("Failed to connect database ".mysqli_error($con));
+				or die("Failed to connect mySQL ".mysqli_error($con));
 	$row = mysqli_fetch_array($result);
 	if ($row['username'] == $username && $row['password'] == $password){
 		echo "Success! Welcome User ".$row['username'];
