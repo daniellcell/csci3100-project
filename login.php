@@ -1,22 +1,28 @@
-<html>
-<head><title>login</title></head>
-<body>
-
-
 <?php
-    
-    $name = $_POST["name"];
-    echo "Hello, ", $name;
-    echo nl2br("\n");
-    echo "You have successfully logged in to the system."
-	    
+
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+	
+	$con=mysqli_connect("localhost","root","");
+	if (mysqli_connect_errno($con)) 
+	{ 
+		echo "Failed to connect SQL" . mysqli_connect_error(); 
+	} 
+
+	$username = stripcslashes($username);
+	$password = stripcslashes($password);
+	$username = mysqli_real_escape_string($con, $username);
+	$password = mysqli_real_escape_string($con, $password);
+	
+	mysqli_select_db($con,"login");
+	
+	$result = mysqli_query($con,"select * from users where username = '$username' and password = '$password'")
+				or die("Failed to connect database ".mysqli_error($con));
+	$row = mysqli_fetch_array($result);
+	if ($row['username'] == $username && $row['password'] == $password){
+		echo "Success! Welcome User ".$row['username'];
+	} else{
+		echo "Wrong Username/Password";
+	}
+	
 ?>
-	
-<form action="index.php" method="post">
-	
-	<input type="submit" id="button" value="Return">
-	
-</form>
-	
-</body>
-</html>
