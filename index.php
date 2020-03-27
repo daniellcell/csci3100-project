@@ -2,11 +2,11 @@
 
 <head>
 <title>index</title>
-<link href="styles/style.css" rel="stylesheet" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-	<div id="frm">
+	<div id="frame">
 		<form action="login.php" method="post">
 			<p>
 				Username: <input name="name" "id="name" type="text">
@@ -15,10 +15,9 @@
 				Password: <input name="id" id="password" type="password">
 			</p>
 			<p>
-				<input type="submit" id="btn" value="Login">
+				<input type="submit" id="button" value="Login">
 			</p>
 		</form>
 	</div>
-
 </body>
 </html>
