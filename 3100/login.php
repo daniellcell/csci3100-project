@@ -6,7 +6,7 @@
 </head>
 <body>
 
-	<div id="frame">
+	<div id="frame1">
 		<form action="process.php" method="post">
 			<p>
 				Username: <input name="username" "id="username" type="text">
