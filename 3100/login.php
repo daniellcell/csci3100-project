@@ -16,6 +16,7 @@
 			</p>
 			<p>
 				<input type="submit" id="button" value="Login">
+				<input type="button" value="Return" onClick="this.form.action='index.php';this.form.submit();">
 			</p>
 			<p>
 				Do not have an account? 
