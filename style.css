@@ -2,15 +2,15 @@ body{
 	background: #eee;
 }
 #frame{
-	border: solid black 1px;
+	border: solid black 2px;
 	width: 20%;
-	border-radius: 5px;
-	margin: 100px auto;
+	border-radius: 20px;
+	margin: 150px;
 	background: white;
 }
 #button{
 		color: #fff;
-		background: #337ab7;
+		background: #6495ED;
 		padding: 5px;
-		margin-Left: 70%;
+		margin-Left: 80%;
 }
