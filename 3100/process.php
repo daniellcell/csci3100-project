@@ -21,8 +21,10 @@
 	$row = mysqli_fetch_array($result);
 	if ($row['username'] == $username && $row['password'] == $password && $row['username'] != ''){
 		echo "Success! Welcome User ".$row['username'];
+		echo '<form action="index.php" method="post"> <input type="submit" id="button" value="Return to Index"> </form>';
 	} else{
 		echo "Wrong Username/Password";
+		echo '<form action="login.php" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
 	}
 	
 ?>
