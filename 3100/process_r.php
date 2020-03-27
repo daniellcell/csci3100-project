@@ -23,13 +23,15 @@
 				or die("Failed to connect mySQL 2 ".mysqli_error($con));
 	$row = mysqli_fetch_array($result);
 	
-	if ($row['username'] == $username && $row['username'] != ''){
+	if (($row['username'] == $username && $row['username'] != '') || $username == ''){
 		echo "Invalid username :(";
 		echo '<form action="register.php" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
 	} elseif ($password != $password2) {
 		echo "Password not the same";
 		echo '<form action="register.php" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
-			
+	} elseif ($password == '') {
+		echo "Empty password";
+		echo '<form action="register.php" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
 	} else {
 			$selectsql = mysqli_query($con, "SELECT MAX(id) AS max FROM users;");
 			$selectmax = mysqli_fetch_array($selectsql);
