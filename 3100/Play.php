@@ -5,6 +5,13 @@
 </head>
 <body>
 	Please choose game:)
+	<div id="play">
+		<form method = "post">
+			<p>
+			<input type="button" value="Leave" onClick="this.form.action='index.php';this.form.submit();">
+			</p>
+		</form>
+	</div>
 		
 </body>
 </html>
