@@ -2,7 +2,7 @@
 <head><title>JoinRoom</title></head>
 <body>
 <div id="joinrm">
-		<form action="process.php" method="post">
+		<form action="room.php" method="post">
 			<p>
         			Please enter room number and password(if any)<br>
 				Room ID: <input name="rid" id="rid" type="text">
@@ -15,12 +15,6 @@
       				<input type="button" value="return" onClick="this.form.action='index.php';this.form.submit();">
 			</p>
 		</form>
-    <?php
-          $rid = $_POST['rid'];
-	  $password = $_POST['password'];
-    
-    echo "Welcome to room" . $rid . "<br>"
-    ?>
 </div>
 </body>
 </html>
