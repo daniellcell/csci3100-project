@@ -18,6 +18,9 @@
 				Re-enter Password: <input name="password2" id="password2" type="password">
 			</p>
 			<p>
+				<input type="button" value="Return" onClick="this.form.action='login.php';this.form.submit();">
+			</p>
+			<p>
 				<input type="submit" id="button" value="Register">
 			</p>
 		</form>
