@@ -8,7 +8,6 @@
 <form action="login.php" method="post">
 	Enter your username: <input name="name" type="text">
 	<input type="submit">
-	Enter your password: 
 </form>
 
 </body>
