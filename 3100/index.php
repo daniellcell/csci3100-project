@@ -20,8 +20,8 @@ if (isset($_SESSION['loginuser'])) {
 			<input type="button" value="game" onClick="this.form.action='game.php';this.form.submit();">
 			<input type="button" value="purchase" onClick="this.form.action='purchase.php';this.form.submit();">
 			<input type="button" value="logout" onClick="this.form.action='logout.php';this.form.submit();">
+			<input type="button" value="chat" onClick="this.form.action='chat.html';this.form.submit();">
 		</form>
 	</div>
-		
 </body>
 </html>
