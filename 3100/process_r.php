@@ -6,7 +6,7 @@ session_start();
 	$password = $_POST['password'];
 	$password2 = $_POST['password2'];
 	
-	$con=mysqli_connect("localhost","root","");
+	$con=mysqli_connect("localhost","root","mysql");
 	if (mysqli_connect_errno($con)) 
 	{ 
 		echo "Failed to connect mySQL 1" . mysqli_connect_error(); 
@@ -39,7 +39,7 @@ session_start();
 			if (mysqli_query($con, $sql) === TRUE) {
 				$_SESSION['loginuser'] = $username;
 				echo "Success! Welcome New User ".$username;
-				echo '<form action="index.php" method="post"> <input type="submit" id="button" value="Return to Index"> </form>';
+				echo '<form action="index.php?page=home" method="post"> <input type="submit" id="button" value="Return to Index"> </form>';
 			} else {
 				echo "Failed to add record ".mysqli_error($con);
 			}

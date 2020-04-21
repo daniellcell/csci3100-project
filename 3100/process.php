@@ -4,7 +4,7 @@ session_start();
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	
-	$con=mysqli_connect("localhost","root","");
+	$con=mysqli_connect("localhost","root","mysql");
 	if (mysqli_connect_errno($con)) 
 	{ 
 		echo "Failed to connect mySQL" . mysqli_connect_error(); 
@@ -23,10 +23,10 @@ session_start();
 	if ($row['username'] == $username && $row['password'] == $password && $row['username'] != ''){
 		$_SESSION['loginuser'] = $username;
 		echo "Success! Welcome User ".$row['username'];
-		echo '<form action="index.php" method="post"> <input type="submit" id="button" value="Return to Index"> </form>';
+		echo '<form action="index.php?page=home" method="post"> <input type="submit" id="button" value="Return to Index"> </form>';
 	} else{
 		echo "Wrong Username/Password";
-		echo '<form action="login.php" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
+		echo '<form action="index.php?page=login" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
 	}
 	
 ?>
