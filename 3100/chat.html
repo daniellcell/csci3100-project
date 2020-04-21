@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Chat App</title>
+  <title>Chatroom</title>
   <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
   <script defer src="script.js"></script>
   <style>
@@ -12,29 +12,29 @@
       padding: 0;
       margin: 0;
       display: flex;
-      justify-content: center;
+      justify-content: left;
     }
 
     #message-container {
       width: 80%;
-      max-width: 1200px;
+      max-width: 500px;
     }
 
     #message-container div {
-      background-color: #CCC;
+      background-color: rgb(24, 164, 199);
       padding: 5px;
     }
 
     #message-container div:nth-child(2n) {
-      background-color: #FFF;
+      background-color: rgb(17, 182, 86);
     }
 
     #send-container {
       position: fixed;
-      padding-bottom: 30px;
+      padding-bottom: 200px;
       bottom: 0;
-      background-color: white;
-      max-width: 1200px;
+      background-color: rgb(255, 255, 255);
+      max-width: 500px;
       width: 80%;
       display: flex;
     }

@@ -3,8 +3,8 @@ const messageContainer = document.getElementById('message-container')
 const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message-input')
 
-const name = prompt('What is your name?')
-appendMessage('You joined')
+const name = prompt('Enter your name:')
+appendMessage('You have connected to the chatroom')
 socket.emit('new-user', name)
 
 socket.on('chat-message', data => {
@@ -12,11 +12,11 @@ socket.on('chat-message', data => {
 })
 
 socket.on('user-connected', name => {
-  appendMessage(`${name} connected`)
+  appendMessage(`${name} connected to the chatroom`)
 })
 
 socket.on('user-disconnected', name => {
-  appendMessage(`${name} disconnected`)
+  appendMessage(`${name} disconnected to the chatroom`)
 })
 
 messageForm.addEventListener('submit', e => {
