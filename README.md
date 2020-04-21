@@ -6,3 +6,10 @@
 4. Open your browser, type localhost/phpmyadmin/
 5. Import login.sql into localhost database (contain one set of user, username:test password:1234)
 6. Modify any php or css files you want and type localhost/3100/xxx.php in your browser to view changes. 
+----------------------------------------------------------
+Chatroom
+1. Download node.js https://nodejs.org/en/
+2. Open terminal and go to 3100 directory
+3. npm install socket.io
+4. npm i --save-dev nodemon
+5. npm run devStart <= everytime 
