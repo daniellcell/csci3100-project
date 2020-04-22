@@ -1,6 +1,5 @@
+<?=template_header('Logout')?>
 <?php
-
-session_start();
 
 	if (isset($_SESSION['loginuser'])) {
 		echo "You have logged out successfully.";
@@ -13,3 +12,5 @@ session_start();
 		echo '<form action="index.php" method="post"> <input type="submit" id="button" value="Return to Index"> </form>';
 	}
 ?>
+
+<?=template_footer()?>
