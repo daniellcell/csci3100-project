@@ -9,11 +9,11 @@
 6. Modify any php or css files you want and type localhost/3100/xxx.php in your browser to view changes. 
 ----------------------------------------------------------
 Failed to connect MySQL:
-1. change process_r.php and prcoess.php:
+1. change process_r.php and prcoess.php
 $con=mysqli_connect("localhost","root",""); Windows user
 
   into
-  
+
 $con=mysqli_connect("localhost","root","mysql"); Mac user
 
 ----------------------------------------------------------
