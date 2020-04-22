@@ -1,10 +1,18 @@
+<?php
+include 'functions.php';
+?>
+
+<?=template_header('Play')?>
+
 <html>
 <head>
 <title>Play</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	Please choose game:)
+
+	<div style="text-align:center;">
+	Please choose game that you want to play with computer:)
 	<div id="play">
 		<form method = "post">
 			<p>
@@ -14,6 +22,9 @@
 			</p>
 		</form>
 	</div>
+	</div>
 		
 </body>
 </html>
+
+<?=template_footer()?>
