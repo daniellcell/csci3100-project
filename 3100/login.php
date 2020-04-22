@@ -1,3 +1,4 @@
+<?=template_header('Login')?>
 <html>
 
 <head>
@@ -28,3 +29,4 @@
 	</div>
 </body>
 </html>
+<?=template_footer()?>
