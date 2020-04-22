@@ -27,6 +27,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `products`
 --
+CREATE DATABASE shoppingcart;
+USE shoppingcart;
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
