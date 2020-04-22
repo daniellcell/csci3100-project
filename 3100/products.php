@@ -29,7 +29,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php if ($product['rrp'] > 0): ?>
                 <span class="rrp">&dollar;<?=$product['rrp']?></span>
                 <?php endif; ?>
-                <form action="cart.php" method="post">
+                <form action="index.php?page=cart" method="post">
                     <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
                     <input type="hidden" name="product_id" value="<?=$product['id']?>">
                     <input type="submit" value="Add To Cart">
