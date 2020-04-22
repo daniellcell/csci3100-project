@@ -1,3 +1,6 @@
+<?=template_header('Products')?>
+<?=template_footer()?>
+
 <?php
 $pdo = pdo_connect_shoppingcart();
 // Select all products
@@ -7,8 +10,7 @@ $stmt->execute();
 $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     // Get the total number of products
     $total_products = $pdo->query('SELECT * FROM products')->rowCount();
-    ?>
-<?=template_header('Products')?>
+?>
 
 <div class="products content-wrapper">
     <h1>Products</h1>
@@ -17,9 +19,13 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php foreach ($products as $product): ?>
             <img src="imgs/<?=$product['img']?>" width="200" height="200" alt="<?=$product['name']?>">
             <span class="name"><?=$product['name']?></span>
-            <span class="price"> &dollar;<?=$product['price']?>
+            <span class="price">
+                &dollar;<?=$product['price']?>
+                <?php if ($product['rrp'] > 0): ?>
+                <span class="rrp">&dollar;<?=$product['rrp']?></span>
+                <?php endif; ?>
                 <form action="index.php?page=cart" method="post">
-                    <input type="text" name="quantity">
+                    <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
                     <input type="hidden" name="product_id" value="<?=$product['id']?>">
                     <input type="submit" value="Add To Cart">
                 </form>
@@ -27,5 +33,3 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php endforeach; ?>
     </div>
 </div>
-
-<?=template_footer()?>
