@@ -11,6 +11,6 @@
 Chatroom: 
 1. Download node.js https://nodejs.org/en/
 2. Open terminal and go to 3100 directory
-3. npm install socket.io
+3. npm i socket.io
 4. npm i --save-dev nodemon
-5. npm run devStart <= everytime 
+5. npm run devStart 
