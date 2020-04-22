@@ -8,8 +8,8 @@
 6. Import the database shoppingcart.sql into localhost database (contain the products information)
 7. Modify any php or css files you want and type localhost/3100/xxx.php in your browser to view changes. 
 ----------------------------------------------------------
-Failed to connect MySQL:
-Change process_r.php and prcoess.php
+Failed to connect MySQL,
+change process_r.php and prcoess.php the following:
 
 $con=mysqli_connect("localhost","root",""); Windows user
 
