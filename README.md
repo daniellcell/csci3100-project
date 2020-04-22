@@ -12,4 +12,5 @@ Chatroom:
 1. Download node.js https://nodejs.org/en/
 2. Decompress node_modules.rar in "3100" folder
 3. Open terminal and go to 3100 directory
-4. npm run devStart 
+4. npm i --save-dev nodemon
+5. npm run devStart 
