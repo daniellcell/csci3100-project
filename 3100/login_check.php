@@ -1,7 +1,9 @@
 <?=template_header('Login')?>
 <?php
 
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 	if (isset($_SESSION['loginuser'])) {
 		echo "You have already logged in!";
