@@ -6,7 +6,7 @@
 4. Open your browser, type localhost/phpmyadmin/
 5. Import login.sql into localhost database (contain one set of user, username:test password:1234)
 6. Import the database shoppingcart.sql into localhost database (contain the products information)
-6. Modify any php or css files you want and type localhost/3100/xxx.php in your browser to view changes. 
+7. Modify any php or css files you want and type localhost/3100/xxx.php in your browser to view changes. 
 ----------------------------------------------------------
 Failed to connect MySQL:
 Change process_r.php and prcoess.php
