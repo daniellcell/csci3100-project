@@ -21,11 +21,13 @@ echo <<<EOT
         <meta charset="utf-8">
         <title>$title</title>
         <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     </head>
     <body>
         <header>
             <div class="content-wrapper">
+                <img src="chess.png">
                 <h1>Board Game Platform</h1>
                 <nav>
                     <a href="index.php">Home</a>
@@ -54,7 +56,7 @@ echo <<<EOT
         </main>
         <footer>
             <div class="content-wrapper">
-                <p>&copy; $year, Board Game Platformm</p>
+                <p>&copy; $year, Board Game Platform</p>
             </div>
         </footer>
         <script src="script.js"></script>
