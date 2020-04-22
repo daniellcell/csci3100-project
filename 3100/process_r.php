@@ -28,14 +28,14 @@ if (!isset($_SESSION)) {
 	$row = mysqli_fetch_array($result);
 	
 	if (($row['username'] == $username && $row['username'] != '') || $username == ''){
-		echo "Invalid username :(";
-		echo '<form action="register.php" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
+		echo "Username is invalid / already been used";
+		echo '<form action="index.php?page=register" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
 	} elseif ($password != $password2) {
 		echo "Password not the same";
-		echo '<form action="register.php" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
-	} elseif ($password == '') {
+		echo '<form action="index.php?page=register" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
+	} elseif ($password == '' || $password2 == '') {
 		echo "Empty password";
-		echo '<form action="register.php" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
+		echo '<form action="index.php?page=register" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
 	} else {			
 			$sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
 			if (mysqli_query($con, $sql) === TRUE) {
