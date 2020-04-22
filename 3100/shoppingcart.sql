@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 22, 2020 at 08:41 AM
+-- Generation Time: Apr 22, 2020 at 09:45 AM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.11
 
@@ -42,7 +42,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `rrp`, `quantity`, `img`) VALUES
-(1, 'Chess', '20.00', '0.00', 10, 'chess.jpg'),
+(1, 'Chess', '20.00', '0.00', 10, 'chess.png'),
 (2, 'Chinese Chess', '20.00', '0.00', 34, 'chinchess.jpg'),
 (3, 'Monopoly', '60.00', '0.00', 23, 'monopoly.jpg'),
 (4, 'Six Men\'s Morris', '20.00', '0.00', 7, 'camera.jpg');
