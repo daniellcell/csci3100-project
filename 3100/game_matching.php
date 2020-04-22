@@ -11,7 +11,7 @@
 
 	<div id="buttons" style="text-align:center">
 		<form method="post">
-			<input type="button" value="Return" onClick="this.form.action='index.php?page=game';this.form.submit();">
+			<input type="button" value="Return" onClick="this.form.action='play.php';this.form.submit();">
 			<input id="rank" type="button" value="Submit Rank" onClick="this.form.action='index.php?page=game';this.form.submit();">
 		</form>
 	</div>
