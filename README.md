@@ -13,6 +13,7 @@ Failed to connect MySQL:
 $con=mysqli_connect("localhost","root",""); Windows user
 into
 $con=mysqli_connect("localhost","root","mysql"); Mac user
+
 ----------------------------------------------------------
 Chatroom: 
 1. Download node.js https://nodejs.org/en/
