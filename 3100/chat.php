@@ -11,7 +11,7 @@
       padding: 0;
       margin: 0;
       display: flex;
-      justify-content: left;
+      justify-content: center;
     }
 
     #message-container {
@@ -30,7 +30,7 @@
 
     #send-container {
       position: fixed;
-      padding-bottom: 200px;
+      padding-bottom: 30px;
       bottom: 0;
       background-color: rgb(255, 255, 255);
       max-width: 600px;

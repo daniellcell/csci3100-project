@@ -3,8 +3,8 @@ const messageContainer = document.getElementById('message-container')
 const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message-input')
 
-const name = prompt('Enter your name:')
-appendMessage('You have connected to the chatroom')
+const name = prompt('Enter the name you want to display in chatroom:')
+appendMessage(`${name} (You) connected to the chatroom`)
 socket.emit('new-user', name)
 
 socket.on('chat-message', data => {
@@ -22,7 +22,7 @@ socket.on('user-disconnected', name => {
 messageForm.addEventListener('submit', e => {
   e.preventDefault()
   const message = messageInput.value
-  appendMessage(`You: ${message}`)
+  appendMessage(`${name} (You): ${message}`)
   socket.emit('send-chat-message', message)
   messageInput.value = ''
 })
