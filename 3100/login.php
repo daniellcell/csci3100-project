@@ -14,7 +14,7 @@
 		  <input type="button" value="Return" onClick="this.form.action='index.php';this.form.submit();">
 			Do not have an account? 
 			<form method="post">
-					<input type="button" value="Register" onClick="this.form.action='register.php';this.form.submit();">
+					<input type="button" value="Register" onClick="this.form.action='index.php?page=register';this.form.submit();">
 			</form>
 	</form>
 
