@@ -41,8 +41,8 @@ echo <<<EOT
                     </a>
                 </div>
                 <nav>
-                    <a href="index.php?page=logout">Logout</a>
                     <a href="index.php?page=login_check">Login</a>
+                    <a href="index.php?page=logout">Logout</a>
                 </nav>
             </div>
         </header>
