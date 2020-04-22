@@ -11,7 +11,9 @@
 Failed to connect MySQL:
 1. change process_r.php and prcoess.php:
 $con=mysqli_connect("localhost","root",""); Windows user
+
   into
+  
 $con=mysqli_connect("localhost","root","mysql"); Mac user
 
 ----------------------------------------------------------
@@ -21,6 +23,6 @@ Chatroom:
 3. Open terminal and go to 3100 directory
 4. npm i --save-dev nodemon
 5. npm run devStart 
-
+----------------------------------------------------------
 Images:
 1. The images for products.php and cart.php is stored in the imgs folder
