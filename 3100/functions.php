@@ -40,7 +40,7 @@ echo <<<EOT
                 </div>
                 <nav>
                     <a href="index.php?page=logout">Logout</a>
-                    <a href="index.php?page=login">Login</a>
+                    <a href="index.php?page=login_check">Login</a>
                 </nav>
             </div>
         </header>
