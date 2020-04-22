@@ -36,6 +36,10 @@
 			}
 		}
 		
+		function closeboard() {
+			$('#board').hide();
+		}	
+				
 		function startgame() {
 			$(".card").not(".matched").click(function () {
 				$(".matched").removeClass("open");
@@ -75,6 +79,7 @@
 				
 				if (finish == 1) {
 					document.getElementById("rank").disabled = false;
+					closeboard();
 					alert("Game end!");
 				}
 				
