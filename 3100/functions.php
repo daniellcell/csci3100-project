@@ -32,7 +32,7 @@ echo <<<EOT
                 <nav>
                     <a href="index.php">Home</a>
                     <a href="index.php?page=game">Game</a>
-                    <a href="index.php?page=chat">Chat</a>
+                    <a href="index.php?page=chat" target="_blank">Chat</a>
                     <a href="index.php?page=products">Products</a>
                 </nav>
                 <div class="link-icons">
