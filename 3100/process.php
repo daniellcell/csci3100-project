@@ -6,7 +6,7 @@ if (!isset($_SESSION)) {
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	
-	$con=mysqli_connect("localhost","root","mysql");
+	$con=mysqli_connect("localhost","root","");
 	if (mysqli_connect_errno($con)) 
 	{ 
 		echo "Failed to connect mySQL" . mysqli_connect_error(); 
