@@ -1,10 +1,10 @@
 <?=template_header('Home')?>
+<div class = "home">
 <?php
-
 if (isset($_SESSION['loginuser'])) {
-	echo "<h1 align=center>Hello, {$_SESSION['loginuser']}! </h1>";
+	echo "Hello, ".$_SESSION['loginuser']."! ";
 }
     echo "Welcome to<br>Board Game Platform.";
 ?>
-
+</div>
 <?=template_footer()?>
