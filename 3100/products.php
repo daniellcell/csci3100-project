@@ -1,14 +1,7 @@
 <?php
 $pdo = pdo_connect_shoppingcart();
-// The amounts of products to show on each page
-$num_products_on_each_page = 4;
-// The current page, in the URL this will appear as index.php?page=products&p=1, index.php?page=products&p=2, etc...
-$current_page = isset($_GET['p']) && is_numeric($_GET['p']) ? (int)$_GET['p'] : 1;
-// Select products ordered by the date added
+// Select all products
 $stmt = $pdo->prepare('SELECT * FROM products');
-// bindValue will allow us to use integer in the SQL statement, we need to use for LIMIT
-$stmt->bindValue(1, ($current_page - 1) * $num_products_on_each_page, PDO::PARAM_INT);
-$stmt->bindValue(2, $num_products_on_each_page, PDO::PARAM_INT);
 $stmt->execute();
 // Fetch the products from the database and return the result as an Array
 $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -19,7 +12,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <div class="products content-wrapper">
     <h1>Products</h1>
-    <p><?=$total_products?> Products</p>
+    <p> Total number of products: <?=$total_products?> Products</p>
     <div class="products-wrapper">
         <?php foreach ($products as $product): ?>
             <img src="imgs/<?=$product['img']?>" width="200" height="200" alt="<?=$product['name']?>">
