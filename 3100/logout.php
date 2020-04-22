@@ -8,7 +8,7 @@
 	} 
 	
 	else {
-		echo "You haven't logged in..";
+		echo "You haven't logged in.";
 		echo '<form action="index.php" method="post"> <input type="submit" id="button" value="Return to Index"> </form>';
 	}
 ?>
