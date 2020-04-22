@@ -9,7 +9,7 @@
 		session_destroy();
 	} else {
 		echo "<script>
-		alert('You haven't logged in!');
+		alert('You haven\'t logged in!');
 		window.location.href='index.php?page=home';
 		</script>";
 	}
