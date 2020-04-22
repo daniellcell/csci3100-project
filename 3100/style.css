@@ -39,20 +39,24 @@ html {
 body {
 	position: relative;
 	min-height: 100%;
-	color: #555555;
-	background-color: #FFFFFF;
-	margin: 0;
-	padding-bottom: 100px; /* Same height as footer */
+	color: #C1CCDB;
+	background-color: #272C3B;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 50px; /* Same height as footer */
+	background-image: url('imgs/bg.png');
 }
 h1, h2, h3, h4, h5 {
-	color: #394352;
+	color: #C1CCDB;
 }
 .content-wrapper {
-	width: 1050px;
-	margin: 0 auto;
+	width: auto;
+	margin: auto;
+	background-color: #4A556F;
+	padding-left: 50px;
 }
 header {
-	border-bottom: 1px solid #EEEEEE;
+	border-bottom: 1px solid #212D43;
 }
 header .content-wrapper {
 	display: flex;
@@ -74,12 +78,12 @@ header nav {
 }
 header nav a {
 	text-decoration: none;
-	color: #555555;
+	color: #C1CCDB;
 	padding: 10px 10px;
 	margin: 0 10px;
 }
 header nav a:hover {
-	border-bottom: 1px solid #aaa;
+	border-bottom: 1px solid #C1CCDB;
 }
 header .link-icons {
 	display: flex;
@@ -114,6 +118,20 @@ header .link-icons a span {
 	position: absolute;
 	top: 22px;
 	right: 0;
+}
+
+main > .home {
+	color: #E5F7FF;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	opacity: 0.8;
+	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	font-size: 70px;
+	font-weight: bold;
 }
 main > .product {
 	display: flex;
@@ -291,9 +309,11 @@ main .placeorder p {
 footer {
 	position: absolute;
 	bottom: 0;
-	border-top: 1px solid #EEEEEE;
-	padding: 20px 0;
+	border-top: 1px solid #212D43;
+	text-align: left;
+	padding: 5px;
 	width: 100%;
+	background-color: #4A556F;
 }
 /* --------------box------------ */
 .box{
