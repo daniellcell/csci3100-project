@@ -2,9 +2,9 @@
 <?php
 
 if (isset($_SESSION['loginuser'])) {
-	echo "Hello, ".$_SESSION['loginuser']."! ";
+	echo "<h1 align=center>Hello, {$_SESSION['loginuser']}! </h1>";
 }
-    echo "Welcome to Board Game Platform.";
+    echo "<h1 align=center>Welcome to Board Game Platform.</h1>";
 ?>
 
 <?=template_footer()?>
