@@ -8,7 +8,7 @@ if (!isset($_SESSION)) {
 	$password = $_POST['password'];
 	$password2 = $_POST['password2'];
 	
-	$con=mysqli_connect("localhost","root","mysql");
+	$con=mysqli_connect("localhost","root","");
 	if (mysqli_connect_errno($con)) 
 	{ 
 		echo "Failed to connect mySQL 1" . mysqli_connect_error(); 
