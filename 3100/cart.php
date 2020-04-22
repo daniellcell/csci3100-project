@@ -35,6 +35,10 @@ if (isset($_GET['remove']) && is_numeric($_GET['remove']) && isset($_SESSION['ca
     // Remove the product from the shopping cart
     unset($_SESSION['cart'][$_GET['remove']]);
 }
+
+if (isset($_POST['empty']) && isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
+    unset($_SESSION['cart']);
+}
 // Update product quantities in cart if the user clicks the "Update" button on the shopping cart page
 if (isset($_POST['update']) && isset($_SESSION['cart'])) {
     // Loop through the post data so we can update the quantities for every product in cart
@@ -127,6 +131,7 @@ if ($products_in_cart) {
         </div>
         <div class="buttons">
             <input type="submit" value="Update" name="update">
+            <input type="submit" value="Empty Cart" name="empty">
             <input type="submit" value="Place Order" name="placeorder">
         </div>
     </form>
