@@ -4,7 +4,7 @@
 if (isset($_SESSION['loginuser'])) {
 	echo "Hello, ".$_SESSION['loginuser'];
 }
-    echo "! Welcome to our Online Boardgame Platform.";
+    echo "! Welcome to Board Game Platform.";
 ?>
 
 <?=template_footer()?>
