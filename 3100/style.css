@@ -312,6 +312,11 @@ footer {
 	text-transform: uppercase;
 	font-weight: 1000;
 }
+.box h2{
+	color: rgb(4, 60, 243);
+	text-transform: uppercase;
+	font-weight: 800;
+}
 .box input[type = "text"],.box input[type = "password"]{
 	border:0;
 	background: none;
