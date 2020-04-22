@@ -24,11 +24,15 @@ if (!isset($_SESSION)) {
 	$row = mysqli_fetch_array($result);
 	if ($row['username'] == $username && $row['password'] == $password && $row['username'] != ''){
 		$_SESSION['loginuser'] = $username;
-		echo "Success! Welcome User ".$row['username'];
-		echo '<form action="index.php?page=home" method="post"> <input type="submit" id="button" value="Return to Index"> </form>';
+		echo "<script>
+		alert('Success! Welcome User {$row['username']}');
+		window.location.href='index.php?page=home';
+		</script>";
 	} else{
-		echo "Wrong Username/Password";
-		echo '<form action="index.php?page=login" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
+		echo "<script>
+		alert('Wrong Username / Password');
+		window.location.href='index.php?page=login';
+		</script>";
 	}
 	
 ?>

@@ -28,20 +28,28 @@ if (!isset($_SESSION)) {
 	$row = mysqli_fetch_array($result);
 	
 	if (($row['username'] == $username && $row['username'] != '') || $username == ''){
-		echo "Username is invalid / already been used";
-		echo '<form action="index.php?page=register" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
+		echo "<script>
+		alert('Username is invalid / already been used!');
+		window.location.href='index.php?page=register';
+		</script>";
 	} elseif ($password != $password2) {
-		echo "Password not the same";
-		echo '<form action="index.php?page=register" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
+		echo "<script>
+		alert('Passwords are not the same!');
+		window.location.href='index.php?page=register';
+		</script>";
 	} elseif ($password == '' || $password2 == '') {
-		echo "Empty password";
-		echo '<form action="index.php?page=register" method="post"> <input type="submit" id="button" value="Try Again"> </form>';
+		echo "<script>
+		alert('Empty Password!');
+		window.location.href='index.php?page=register';
+		</script>";
 	} else {			
 			$sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
 			if (mysqli_query($con, $sql) === TRUE) {
 				$_SESSION['loginuser'] = $username;
-				echo "Success! Welcome New User ".$username;
-				echo '<form action="index.php?page=home" method="post"> <input type="submit" id="button" value="Return to Index"> </form>';
+				echo "<script>
+				alert('Success! Welcome New User {$row['username']}');
+				window.location.href='index.php?page=home';
+				</script>";
 			} else {
 				echo "Failed to add record ".mysqli_error($con);
 			}

@@ -2,14 +2,16 @@
 <?php
 
 	if (isset($_SESSION['loginuser'])) {
-		echo "You have logged out successfully.";
-		echo '<form action="index.php" method="post"> <input type="submit" id="button" value="Return to Index"> </form>';
+		echo "<script>
+		alert('You have logged out successfully!');
+		window.location.href='index.php?page=home';
+		</script>";
 		session_destroy();
-	} 
-	
-	else {
-		echo "You haven't logged in.";
-		echo '<form action="index.php" method="post"> <input type="submit" id="button" value="Return to Index"> </form>';
+	} else {
+		echo "<script>
+		alert('You haven't logged in!');
+		window.location.href='index.php?page=home';
+		</script>";
 	}
 ?>
 

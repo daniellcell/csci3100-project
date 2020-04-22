@@ -6,8 +6,10 @@ if (!isset($_SESSION)) {
 }
 
 	if (isset($_SESSION['loginuser'])) {
-		echo "You have already logged in!";
-		echo '<form action="index.php" method="post"> <input type="submit" id="button" value="Return to Index"> </form>';
+		echo "<script>
+		alert('You have already logged in!');
+		window.location.href='index.php?page=home';
+		</script>";
 	} 
 	
 	else {
