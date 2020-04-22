@@ -27,8 +27,10 @@ echo <<<EOT
     <body>
         <header>
             <div class="content-wrapper">
-                <img src="imgs/chess.png">
+				<nav>
+                <img src="imgs/chess.png" height="64" width="64">
                 <h1>Board Game Platform</h1>
+				</nav>
                 <nav>
                     <a href="index.php">Home</a>
                     <a href="index.php?page=game">Game</a>
