@@ -8,7 +8,7 @@
 <body>
 	<form class="box" action="process_r.php" method="post">
 	  <h1>Board Game Platform</h1>
-	  <h2>Register</h2>
+	  <h2>registration</h2>
 		  <input type="text" name="username" placeholder="Username (At most 10 characters)">
 		  <input type="password" name="password" placeholder="Password (At most 15 characters)">
 		  <input type="password" name="password2"  placeholder="Re-enter Password">
