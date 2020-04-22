@@ -1,3 +1,4 @@
+<?=template_header('Login')?>
 <?php
 
 session_start();
@@ -12,3 +13,4 @@ session_start();
 		header("Location: index.php?page=login");
 	}
 ?>
+<?=template_footer()?>
