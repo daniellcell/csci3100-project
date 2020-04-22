@@ -17,13 +17,9 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php foreach ($products as $product): ?>
             <img src="imgs/<?=$product['img']?>" width="200" height="200" alt="<?=$product['name']?>">
             <span class="name"><?=$product['name']?></span>
-            <span class="price">
-                &dollar;<?=$product['price']?>
-                <?php if ($product['rrp'] > 0): ?>
-                <span class="rrp">&dollar;<?=$product['rrp']?></span>
-                <?php endif; ?>
+            <span class="price"> &dollar;<?=$product['price']?>
                 <form action="index.php?page=cart" method="post">
-                    <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
+                    <input type="text" name="quantity">
                     <input type="hidden" name="product_id" value="<?=$product['id']?>">
                     <input type="submit" value="Add To Cart">
                 </form>
