@@ -1,3 +1,4 @@
+<?=template_header('Register')?>
 <html>
 
 <head>
@@ -27,3 +28,4 @@
 	</div>
 </body>
 </html>
+<?=template_footer()?>
