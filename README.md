@@ -14,3 +14,6 @@ Chatroom:
 3. Open terminal and go to 3100 directory
 4. npm i --save-dev nodemon
 5. npm run devStart 
+
+Images:
+1. The images for products.php is stored in the imgs folder
