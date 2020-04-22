@@ -6,26 +6,16 @@
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-	<div id="frame1">
-		<form action="process_r.php" method="post">
-			<p>
-				Username: <input name="username" id="username" type="text">
-			</p>
-			<p>
-				Password: <input name="password" id="password" type="password">
-			</p>
-			<p>
-				Re-enter Password: <input name="password2" id="password2" type="password">
-			</p>
-			<p>
-				<input type="button" value="Return" onClick="this.form.action='login.php';this.form.submit();">
-			</p>
-			<p>
-				<input type="submit" id="button" value="Register">
-			</p>
-		</form>
-	</div>
+	<form class="box" action="process_r.php" method="post">
+	  <h1>Board Game Platform</h1>
+	  <h2>Register</h2>
+		  <input type="text" name="username" placeholder="Username">
+		  <input type="password" name="password" placeholder="Password">
+		  <input type="password" name="password2"  placeholder="Re-enter Password">
+		  <input type="submit" value="Register">
+		  <br>
+		  <input type="button" value="Return" onClick="this.form.action='index.php';this.form.submit();">
+	</form>
 </body>
 </html>
 <?=template_footer()?>
