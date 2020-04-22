@@ -34,8 +34,6 @@ CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `name` varchar(200) NOT NULL,
   `price` decimal(7,2) NOT NULL,
-  `rrp` decimal(7,2) NOT NULL DEFAULT '0.00',
-  `quantity` int(11) NOT NULL,
   `img` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -44,10 +42,10 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `rrp`, `quantity`, `img`) VALUES
-(1, 'Chess', '20.00', '0.00', 10, 'chess.png'),
-(2, 'Chinese Chess', '20.00', '0.00', 34, 'chinchess.jpg'),
-(3, 'Monopoly', '60.00', '0.00', 23, 'monopoly.jpg'),
-(4, 'Six Men\'s Morris', '20.00', '0.00', 7, 'camera.jpg');
+(1, 'Chess', '20.00', 'chess.png'),
+(2, 'Chinese Chess', '20.00', 'chinchess.jpg'),
+(3, 'Monopoly', '60.00', 'monopoly.jpg'),
+(4, 'Six Men\'s Morris', '20.00', 'six_men\s_morris.jpg');
 
 --
 -- Indexes for dumped tables
