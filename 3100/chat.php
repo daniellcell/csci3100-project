@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +5,7 @@
   <title>Chatroom</title>
   <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
   <script defer src="script.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css">
   <style>
     body {
       padding: 0;
@@ -34,7 +33,7 @@
       padding-bottom: 200px;
       bottom: 0;
       background-color: rgb(255, 255, 255);
-      max-width: 500px;
+      max-width: 600px;
       width: 80%;
       display: flex;
     }
@@ -42,13 +41,30 @@
     #message-input {
       flex-grow: 1;
     }
+    #send-button {
+      border:0;
+      background: orange;
+      display: block;
+      margin: auto;
+      text-align: center;
+      border: 2px solid #4614f8;
+      padding: 14px 20px;
+      outline: none;
+      color: black;
+      border-radius: 24px;
+      transition: 0.25s;
+      cursor: pointer;
+    }
+    #send-button:hover{
+      background: #e4426a;
+    }
   </style>
-</head>
-<body>
-  <div id="message-container"></div>
-  <form id="send-container">
-    <input type="text" id="message-input">
-    <button type="submit" id="send-button">Send</button>
-  </form>
-</body>
+  </head>
+  <body>
+    <div id="message-container"></div>
+    <form id="send-container">
+      <input type="text" id="message-input">
+      <button type="submit" id="send-button">Send</button>
+    </form>
+  </body>
 </html>
