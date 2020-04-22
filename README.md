@@ -16,4 +16,4 @@ Chatroom:
 5. npm run devStart 
 
 Images:
-1. The images for products.php is stored in the imgs folder
+1. The images for products.php and cart.php is stored in the imgs folder
