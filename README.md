@@ -10,7 +10,6 @@
 ----------------------------------------------------------
 Failed to connect MySQL:
 1. change process_r.php and prcoess.php:
-
 $con=mysqli_connect("localhost","root",""); Windows user
 
 into
