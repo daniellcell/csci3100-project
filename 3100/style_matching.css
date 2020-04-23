@@ -1,35 +1,107 @@
 #board {
-	width: 616px;
-	height: 204px;
-	border: 1px solid #5F9EA0; 
+	width: 650px;
+	height: 300px;
 	margin: auto;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	background-color: rgba(202, 214, 240, 0.6);
+	border-radius: 30px;
 }
-
 .card {
 	width: 75px;
-	height: 100px;
-	border: 1px solid #5F9EA0;
+	height: 120px;
 	float: left;
 	text-align: center;
-	vertical-align: middle;
+	position: relative;
+	top: 10%;
+	left: 4%;
 	line-height: 100px;
-	font-size: 25px;
-	font-family: Georgia;
-	cursor: grab;
+	font-size: 50px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	background-image: url('imgs/card.png');
 }
 
 .open {
-	background-color: #CCFFFF;
-	color: #000000;
+	background-image: url('imgs/back.png');
+	color: #869AAB;
 }
 
 .close {
-	background-color: #EEFFFF;
-	color: #EEFFFF;
-	font-size: 1px;
+	font-size: 0px;
 }
 
 .matched {
-	background-color: #E6EDED;	
-	color: #000000;
+	background-image: url('imgs/back.png');
+	color: #465769;
+}
+
+.box{
+	height: 200px;
+	width: 650px;
+	padding: 40px;
+	background: #CAD6F0;
+	opacity: 0.6;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	border-radius: 30px;
+	color: #384051;
+}
+
+.box h1{
+	color: #384051;
+	font-size: 24px;
+	font-weight: 1000;
+}
+.box input[type = "button"]{
+	border:0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #909EBC;
+	padding: 14px 40px;
+	outline: none;
+	color: rgb(0, 0, 0);
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+.box input[type = "button"]:hover{
+  	background: #394253;
+	color: #E8ECF4;
+}
+
+#return{
+	border:0;
+	background: #CAD6F0;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	font-weight: bold;
+	color: #394253;
+	border: 2px solid #909EBC;
+	padding: 14px 40px;
+	outline: none;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+	opacity: 0.6;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+#return:hover{
+  	background: #394253;
+	color: #E8ECF4;
 }
