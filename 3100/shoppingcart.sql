@@ -41,11 +41,11 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `price`, `rrp`, `quantity`, `img`) VALUES
+INSERT INTO `products` (`id`, `name`, `price`, `img`) VALUES
 (1, 'Chess', '20.00', 'chess.png'),
-(2, 'Chinese Chess', '20.00', 'chinchess.jpg'),
+(2, 'Chinese Chess', '20.00', 'chinesechess.jpg'),
 (3, 'Monopoly', '60.00', 'monopoly.jpg'),
-(4, 'Six Men\'s Morris', '20.00', 'six_men\s_morris.jpg');
+(4, 'Six Men\'s Morris', '20.00', 'sixmensmorris.jpg');
 
 --
 -- Indexes for dumped tables
