@@ -22,13 +22,12 @@
 </head>
 
 <body>
-	<h3 style="text-align:center">
+	<h3 id = "det" style="text-align:center">
 		This is a simplified version of 'Connect Four'.<br>
 		How to win: get 4-in-a-row / 4-in-a-column.
 	</h3>
-	<div id="buttons" style="text-align:center">
-		<button onclick="window.location='play.php'">Return</button>
-		
+	<div id="buttons" style="text-align:center" class = "box">
+		<h1>Game End!<h1/><text id = "end"></text>
 		<form action="submit_rank.php" method="post">
 			<input id="result" name="result" type="number" style="display:none">
 			<input id="gamename" name="gamename" type="text" value="chess" style="display:none">
@@ -39,11 +38,11 @@
 	<div id="board">	
 	<script type="text/javascript">
 		var board_arr = [".", ".", ".", ".", ".", ".", ".", 
-						".", ".", ".", ".", ".", ".", ".", 
-						".", ".", ".", ".", ".", ".", ".", 
-						".", ".", ".", ".", ".", ".", ".", 
-						".", ".", ".", ".", ".", ".", ".", 
-						".", ".", ".", ".", ".", ".", "."];		// 7x6 board
+									".", ".", ".", ".", ".", ".", ".", 
+									".", ".", ".", ".", ".", ".", ".", 
+									".", ".", ".", ".", ".", ".", ".", 
+									".", ".", ".", ".", ".", ".", ".", 
+									".", ".", ".", ".", ".", ".", "."];		// 7x6 board
 		var size = board_arr.length;
 		var finish = 0;
 		var base = [35, 36, 37, 38, 39, 40, 41];
@@ -60,6 +59,8 @@
 		
 		function closeboard() {
 			$('#board').hide();
+			$('#det').hide();
+			$('#buttons').show();
 		}	
 		
 		function checkend(cur, col, name) {
@@ -142,38 +143,40 @@
 				var finish = checkend(cur, col, "player");		// player
 				if (finish == 1) {
 					document.getElementById("rank").disabled = false;
+					$('#end').append("<h2>You win!</h2>");
 					closeboard();
 					document.getElementById("result").setAttribute("value", 1);
-					alert("Game end! Winner: Player");
 					
 				}	
 					
 				var finish = checkend(com, pick, "computer");		// computer
 				if (finish == 1) {
 					document.getElementById("rank").disabled = false;
+					$('#end').append("<h2>Computer win!</h2>");
 					closeboard();
 					document.getElementById("result").setAttribute("value", 0);
-					alert("Game end! Winner: Computer");
 				}	
 				
 				if (finish == 0 && cnt == size) {	// if all holes are occupied
 					finish = 1;
 					document.getElementById("rank").disabled = false;
+					$('#end').append("<h2>Draw!</h2>");
 					closeboard();
 					document.getElementById("result").setAttribute("value", 0);
-					alert("Game end! Draw");
 				}
 			
-			});
+			}
+			);
 		}
-
+		
+		$('#buttons').hide();
 		document.getElementById("rank").disabled = true;
 		initialize();
 		startgame();
 
 	</script>
 	</div>
-
+	<input id="return" value="Return" onClick="window.location='play.php'">
 
 </body>
 
