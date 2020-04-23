@@ -17,10 +17,10 @@
 		$gamename = $_POST['gamename'];
 		$username = $_SESSION['loginuser'];
 		
-		/*echo
+		echo
 		"<script>
-			alert('$gamename');
-		</script>";*/
+			alert($result);
+		</script>";
 		
 		$gamename = stripcslashes($gamename);
 		$gamename = mysqli_real_escape_string($con, $gamename);
@@ -45,8 +45,16 @@
 			}
 
 			else if ($gamename == "matching") {
-				
-				
+				$sql = "UPDATE matching SET username='$username', cnt=$result WHERE username='$username' and cnt>$result";
+				if (mysqli_query($con, $sql) === TRUE) {
+					echo
+					"<script>
+						alert('Submitted :D');
+						window.location.href='index.php?page=game';
+					</script>";
+				} else {
+					echo "Failed to add rank ".mysqli_error($con);
+				}
 			}
 			
 			
@@ -65,14 +73,22 @@
 				}
 			}
 			else if ($gamename == "matching") {
-				
-				
+				$sql = "INSERT INTO matching (username, cnt) VALUES ('$username', $result)";
+				if (mysqli_query($con, $sql) === TRUE) {
+					echo
+					"<script>
+						alert('Submitted :D');
+						window.location.href='index.php?page=game';
+					</script>";
+				} else {
+					echo "Failed to add rank ".mysqli_error($con);
+				}				
 			}
 			
 		}
 		
 	
-	} 
+	} 		// end of logged in user
 		
 	else {	
 		echo

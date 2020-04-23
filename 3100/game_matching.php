@@ -16,9 +16,12 @@
 	<p align="center">You flipped cards <span id="clickcount">0</span> times</p>
 
 	<div id="buttons" style="text-align:center">
-		<form method="post">
-			<input type="button" value="Return" onClick="this.form.action='play.php';this.form.submit();">
-			<input id="rank" type="button" value="Submit Rank" onClick="this.form.action='index.php?page=game';this.form.submit();">
+		<button onclick="window.location='play.php'">Return</button>
+		
+		<form action="submit_rank.php" method="post">
+			<input id="result" name="result" type="number" style="display:none">
+			<input id="gamename" name="gamename" type="text" value="matching" style="display:none">
+			<input id="rank" type="button" value="Submit Rank" onClick="this.form.submit();">
 		</form>
 	</div>
 
@@ -27,6 +30,7 @@
 		var cards_arr = ["G", "G", "A", "A", "M", "M", "E", "E", "3", "3", "1", "1", "0", "0", "O", "O"];
 		var cardsno = cards_arr.length;
 		var finish = 0;
+		var cnt = 0;
 
 		function shuffle() {
 			var i = cardsno;
@@ -52,6 +56,7 @@
 					
 				if (!$(this).hasClass("matched")) {
 					$("#clickcount").text(parseInt($("#clickcount").text()) + 1);
+					cnt++;
 				}	
 					
 				var cardsopened = $(".open").length;
@@ -85,6 +90,7 @@
 				
 				if (finish == 1) {
 					document.getElementById("rank").disabled = false;
+					document.getElementById("result").setAttribute("value", cnt);
 					closeboard();
 					alert("Game end!");
 				}
