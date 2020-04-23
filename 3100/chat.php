@@ -6,6 +6,7 @@
   <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
   <script defer src="script.js"></script>
   <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     body {
       padding: 0;
