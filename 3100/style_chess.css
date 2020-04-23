@@ -1,35 +1,70 @@
 #board {
-	width: 539px;
-	height: 462px;
-	border: 1px solid blue; 
+	width: 559px;
+	height: 482px;
 	margin: auto;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	background-color: rgba(74, 85, 111, 0.8);
+	border-radius: 30px;
+}
+h1{
+	color: #384051;
+	font-size: 72pt;
+}
+
+h2{
+	color: #384051;
+	font-size: 50pt;
 }
 
 .hole {
 	width: 75px;
 	height: 75px;
-	border: 1px solid blue;
+	position: relative;
+	top: 4%;
+	left: 3%;
+	border: 1px solid #909EBC;
 	float: left;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 75px;
 	font-size: 1px;
-}
-
-.empty {
-	background-color: white;
-	color: white;
-}
-
-.occupied {
+	border-radius: 40px;
+	background-color: rgba(202, 214, 240, 0.6);
 }
 
 .player {
-	background-color: red;	
-	color: red;
+	background-image: url('imgs/red.png');
 }
 
 .computer {
-	background-color: yellow;	
-	color: yellow;
+	background-image: url('imgs/yellow.png');
+}
+
+#return{
+	border:0;
+	background: #CAD6F0;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	font-weight: bold;
+	color: #394253;
+	border: 2px solid #909EBC;
+	padding: 14px 40px;
+	outline: none;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+	opacity: 0.6;
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+#return:hover{
+  	background: #394253;
+	color: #E8ECF4;
 }
