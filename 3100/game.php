@@ -1,4 +1,9 @@
 <?=template_header('Game')?>
+<?php
+	if (!isset($_SESSION)) {
+		session_start();
+	}	
+?>
 
 <div id="frame2" style="text-align:center;height:50px;">
 		<form method="post">

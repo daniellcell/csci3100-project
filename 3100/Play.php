@@ -1,5 +1,9 @@
 <?php
-include 'functions.php';
+	include 'functions.php';
+
+	if (!isset($_SESSION)) {
+		session_start();
+	}	
 ?>
 
 <?=template_header('Play')?>
@@ -11,7 +15,7 @@ include 'functions.php';
 </head>
 <body>
 
-	<div style="text-align:center;">
+	<div style="text-align:center; vertical-align: middle;">
 	Please choose game that you want to play with computer:)
 	<div id="play">
 		<form method = "post">

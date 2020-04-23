@@ -1,6 +1,12 @@
 <!--HAVE BUG!!! but idk where :(
 	plz don't try yet, will GG seriously
 	if tried and sometimes sno response, plz restart the wampserver and use another browser..-->
+	
+<?php
+	if (!isset($_SESSION)) {
+		session_start();
+	}	
+?>
 
 <html>
 
@@ -15,9 +21,12 @@
 		How to win: get 4-in-a-row / 4-in-a-column.
 	</h3>
 	<div id="buttons" style="text-align:center">
-		<form method="post">
-			<input type="button" value="Return" onClick="this.form.action='play.php';this.form.submit();">
-			<input id="rank" type="button" value="Submit Rank" onClick="this.form.action='index.php?page=game';this.form.submit();">
+		<button onclick="window.location='play.php'">Return</button>
+		
+		<form action="submit_rank.php" method="post">
+			<input id="result" name="result" type="number" style="display:none">
+			<input id="gamename" name="gamename" type="text" value="chess" style="display:none">
+			<input id="rank" type="button" value="Submit Rank" onClick="this.form.submit();">
 		</form>
 	</div>
 
@@ -111,13 +120,16 @@
 				if (finish == 1) {
 					document.getElementById("rank").disabled = false;
 					closeboard();
+					document.getElementById("result").setAttribute("value", 1);
 					alert("Game end! Winner: Player");
+					
 				}	
 					
 				var finish = checkend(com, pick, "computer");		// computer
 				if (finish == 1) {
 					document.getElementById("rank").disabled = false;
 					closeboard();
+					document.getElementById("result").setAttribute("value", 0);
 					alert("Game end! Winner: Computer");
 				}	
 				
@@ -125,6 +137,7 @@
 					finish = 1;
 					document.getElementById("rank").disabled = false;
 					closeboard();
+					document.getElementById("result").setAttribute("value", 0);
 					alert("Game end! Draw");
 				}
 			
