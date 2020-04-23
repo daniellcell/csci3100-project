@@ -17,11 +17,6 @@
 		$gamename = $_POST['gamename'];
 		$username = $_SESSION['loginuser'];
 		
-		/*echo
-		"<script>
-			alert($result);
-		</script>";*/
-		
 		$gamename = stripcslashes($gamename);
 		$gamename = mysqli_real_escape_string($con, $gamename);
 		mysqli_select_db($con, "game_rank");
