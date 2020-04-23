@@ -99,17 +99,17 @@ caption {
 	<tr id="1">
 		<td>1</td>
 		<td class="name"> <?php echo $chess_name[0];?> </td>
-		<td class="stat"> <?php echo $chess_per[0]*100;?> </td>
+		<td class="stat"> <?php echo round($chess_per[0]*100, 3);?> </td>
 	</tr>
 	<tr id="2">
 		<td>2</td>
 		<td class="name"> <?php echo $chess_name[1];?> </td>
-		<td class="stat"> <?php echo $chess_per[1]*100;?> </td>
+		<td class="stat"> <?php echo round($chess_per[1]*100, 3);?> </td>
 	</tr>
 	<tr id="3">
 		<td>3</td>
 		<td class="name"> <?php echo $chess_name[2];?> </td>
-		<td class="stat"> <?php echo $chess_per[2]*100;?> </td>
+		<td class="stat"> <?php echo round($chess_per[2]*100, 3);?> </td>
 	</tr>
 </table>
 
