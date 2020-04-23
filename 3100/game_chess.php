@@ -3,10 +3,13 @@
 	if tried and sometimes sno response, plz restart the wampserver and use another browser..-->
 	
 <?php
+	include 'functions.php';
 	if (!isset($_SESSION)) {
 		session_start();
 	}	
 ?>
+<?=template_header('Connect Four')?>
+<?=template_footer()?>
 
 <html>
 
