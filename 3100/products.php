@@ -38,7 +38,7 @@ h1 {
 	text-align: center;
 	width: 100%;
 }
-#products {
+.products content-wrapper {
 	background-color: rgba(202, 214, 240, 0.6);
 	width: 50%;
 	border-radius: 30px;
@@ -56,6 +56,7 @@ h1 {
 
 <div class="products content-wrapper">
 	<form action="index.php?page=cart" method="post">
+	<h1> Products </h1>
 	<table id = "products">
     <thead>
     <tr>
