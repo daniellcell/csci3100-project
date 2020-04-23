@@ -1,9 +1,3 @@
-<!--HAVE BUG!!! but idk where :(
-	plz don't play too seriously (until only few holes are left), will GG
-	but for simple demo (e.g. connect-4 in 4 rounds) is ok lol
-	if u tried and sometimes no response, plz restart the wampserver and use another browser..
-	(welcome to help debug hahaha)-->
-	
 <?php
 	include 'functions.php';
 	if (!isset($_SESSION)) {
