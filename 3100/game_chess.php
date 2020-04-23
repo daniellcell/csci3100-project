@@ -19,7 +19,7 @@
 	<h3 id = "det" style="text-align:center">
 		This is a simplified version of 'Connect Four'.<br>
 		How to win: get 4-in-a-row / 4-in-a-column.<br>
-		You can start your turn first.
+		You can start your turn first.		
 	</h3>
 	<div id="buttons" style="text-align:center" class = "box">
 		<h1>Game End!<h1/><text id = "end"></text>
@@ -119,6 +119,15 @@
 					i = i-7;					
 				}	
 				
+				var finish = checkend(cur, col, "player");		// player
+				if (finish == 1) {
+					document.getElementById("rank").disabled = false;
+					$('#end').append("<h2>You win!</h2>");
+					closeboard();
+					document.getElementById("result").setAttribute("value", 1);
+					
+				}	
+				
 				// computer's turn (random)
 				while (check == 0) {
 					var pick = Math.floor(Math.random()*7);
@@ -134,15 +143,6 @@
 						i = i-7;
 					}
 				}
-				
-				var finish = checkend(cur, col, "player");		// player
-				if (finish == 1) {
-					document.getElementById("rank").disabled = false;
-					$('#end').append("<h2>You win!</h2>");
-					closeboard();
-					document.getElementById("result").setAttribute("value", 1);
-					
-				}	
 					
 				var finish = checkend(com, pick, "computer");		// computer
 				if (finish == 1) {
