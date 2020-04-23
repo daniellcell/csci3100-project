@@ -143,43 +143,63 @@ main > .home {
 	-o-user-select: none;
 	user-select: none;
 }
-main > .product {
+main .products .products-wrapper {
 	display: flex;
-	padding: 40px 0;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding: 40px 0 0 0;
 }
-main > .product > div {
-	padding-left: 15px;
+
+main .products .products-wrapper .product {
+		display: block;
+		overflow: hidden;
+		text-decoration: none;
+		width: 25%;
+		padding-bottom: 60px;
+	}
+
+main .products .products-wrapper .product img {
+			transform: scale(1);
+			transition: transform 1s;
+		}
+
+main .products .products-wrapper .product .name {
+			display: block;
+			color: #555555;
+			padding: 20px 0 2px 0;
+		}
+main .products .products-wrapper .product .price {
+			display: block;
+			color: #999999;
+		}
+
+main .products .products-wrapper .product .rrp {
+			color: #BBBBBB;
+			text-decoration: line-through;
+		}
+
+main .products .products-wrapper .product:hover img {
+			transform: scale(1.05);
+			transition: transform 1s;
+		}
+
+main .products .products-wrapper .product:hover .name {
+			text-decoration: underline;
+		}
+main .products .products-wrapper form {
+		display: flex;
+		flex-flow: column;
+		margin: 40px 0;
 }
-main > .product h1 {
-	font-size: 34px;
-	font-weight: normal;
-	margin: 0;
-	padding: 20px 0 10px 0;
-}
-main > .product .price {
-	display: block;
-	font-size: 22px;
-	color: #999999;
-}
-main > .product .rrp {
-	color: #BBBBBB;
-	text-decoration: line-through;
-	font-size: 22px;
-	padding-left: 5px;
-}
-main > .product form {
-	display: flex;
-	flex-flow: column;
-	margin: 40px 0;
-}
-main > .product form input[type="number"] {
-	width: 400px;
-	padding: 10px;
-	margin-bottom: 15px;
-	border: 1px solid #ccc;
-	color: #555555;
-	border-radius: 5px;
-}
+main .products .products-wrapper form input[type="text"] {
+		width: 400px;
+		padding: 10px;
+		margin-bottom: 15px;
+		border: 1px solid #ccc;
+		color: #555555;
+		border-radius: 5px;
+	}
 main > .product form input[type="submit"] {
 	background: #4e5c70;
 	border: 0;
@@ -204,25 +224,6 @@ main > .products h1 {
 	text-align: center;
 	width: 100%;
 }
-main > .products .buttons {
-	text-align: right;
-	padding-bottom: 40px;
-}
-main > .products .buttons a {
-	display: inline-block;
-	text-decoration: none;
-	margin-left: 5px;
-	padding: 12px 20px;
-	border: 0;
-	background: #4e5c70;
-	color: #FFFFFF;
-	font-size: 14px;
-	font-weight: bold;
-	border-radius: 5px;
-}
-main > .products .buttons a:hover {
-	background: #434f61;
-}
 main .cart h1 {
 	display: block;
 	font-weight: normal;
@@ -234,6 +235,7 @@ main .cart h1 {
 }
 main .cart table {
 	width: 100%;
+	padding-right: 40px;
 }
 main .cart table thead td {
 	padding: 30px 0;
@@ -282,10 +284,13 @@ main .cart .subtotal .text {
 	padding-right: 40px;
 	font-size: 18px;
 }
+
 main .cart .subtotal .price {
-	font-size: 18px;
-	color: #999999;
+		padding-right: 40px;
+		font-size: 18px;
+		color: #999999;
 }
+
 main .cart .buttons {
 	text-align: right;
 	padding-bottom: 40px;
