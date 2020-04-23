@@ -26,7 +26,7 @@
 		<form action="submit_rank.php" method="post">
 			<input id="result" name="result" type="number" style="display:none">
 			<input id="gamename" name="gamename" type="text" value="chess" style="display:none">
-			<input id="rank" type="button" value="Submit Rank" onClick="this.form.submit();">
+			<input id="rank" type="button" value="Submit result" onClick="this.form.submit();">
 		</form>
 	</div>
 
