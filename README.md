@@ -24,7 +24,7 @@ Chatroom:
 1. Download node.js https://nodejs.org/en/
 2. Open terminal and go to 3100 directory
 3. npm i --save-dev nodemon
-4. npm run devStart <= everytime we run
+4. npm run devStart    <= 之後每次 run
 ----------------------------------------------------------
 Images:
 1. The images for products.php and cart.php is stored in the imgs folder
