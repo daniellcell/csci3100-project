@@ -22,7 +22,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <span class="price">
                 &dollar;<?=$product['price']?>
                 <form action="index.php?page=cart" method="post">
-                    <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
+                    <input type="text" name="quantity">
                     <input type="hidden" name="product_id" value="<?=$product['id']?>">
                     <input type="submit" value="Add To Cart">
                 </form>
