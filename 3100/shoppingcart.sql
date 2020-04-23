@@ -46,6 +46,7 @@ INSERT INTO `products` (`id`, `name`, `price`, `img`) VALUES
 (2, 'Chinese Chess', '20.00', 'chinchess.png'),
 (3, 'Monopoly', '60.00', 'monopoly.png'),
 (4, 'Six Men\'s Morris', '20.00', 'sixmensmorris.png');
+(5, 'Connect 4', '15.00', 'connect4.png');
 
 --
 -- Indexes for dumped tables
