@@ -8,8 +8,7 @@
 6. Import **shoppingcart.sql** into localhost database (contain the products information)
 7. Import **game_rank.sql** into localhost database (contain 2 tables, they are ranks for 2 games respectively)
 8. Modify any php or css files you want and type localhost/3100/xxx.php in your browser to view changes. 
-
-**Recommended browser: Google Chrome**
+9. Google Chrome is preferred
 ----------------------------------------------------------
 Failed to connect MySQL,
 change process_r.php and prcoess.php the following:
