@@ -262,7 +262,7 @@ main .placeorder p {
 	text-align: center;
 }
 footer {
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	border-top: 1px solid #212D43;
 	text-align: left;
