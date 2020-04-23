@@ -18,7 +18,51 @@ table {
 	vertical-align: middle;
 	margin: auto;
 }
+caption {
+	font-size: 23px;
+}
 </style>
+
+
+<?php
+	$con=mysqli_connect("localhost","root","");
+	if (mysqli_connect_errno($con)) 
+	{ 
+		echo "Failed to connect mySQL" . mysqli_connect_error(); 
+	}
+	mysqli_select_db($con, "game_rank");
+	
+	
+
+	// table of matching	
+	$sql = "SELECT * FROM matching ORDER BY cnt ASC LIMIT 3";
+	$res = mysqli_query($con, $sql);
+	
+	$matching_name = array(NULL, NULL, NULL);
+	$matching_cnt = array(NULL, NULL, NULL);
+	$rowid = 0;
+	if (mysqli_num_rows($res) > 0) {
+		while($row = mysqli_fetch_assoc($res)) {
+			$matching_name[$rowid] = $row["username"];
+			$matching_cnt[$rowid] = $row["cnt"];
+			$rowid++;
+		}
+	} 
+	
+	// table of chess	
+	$sql = "SELECT * FROM chess ORDER BY (win/played) DESC, played DESC LIMIT 3";
+	$res = mysqli_query($con, $sql);
+	$chess_name = array(NULL, NULL, NULL);
+	$chess_per = array(NULL, NULL, NULL);
+	$rowid = 0;
+	if (mysqli_num_rows($res) > 0) {
+		while($row = mysqli_fetch_assoc($res)) {
+			$chess_name[$rowid] = $row["username"];
+			$chess_per[$rowid] = $row["win"]/$row["played"];
+			$rowid++;
+		}
+	} 
+?>
 
 <table id="matching">
 	<caption>Matching</caption>
@@ -27,20 +71,20 @@ table {
 		<th>Username</th>
 		<th>Flips</th>
 	</tr>
-	<tr>
+	<tr id="1">
 		<td>1</td>
-		<td></td>
-		<td></td>
+		<td class="name"> <?php echo $matching_name[0];?> </td>
+		<td class="stat"> <?php echo $matching_cnt[0];?> </td>
 	</tr>
-	<tr>
+	<tr id="2">
 		<td>2</td>
-		<td></td>
-		<td></td>
+		<td class="name"> <?php echo $matching_name[1];?> </td>
+		<td class="stat"> <?php echo $matching_cnt[1];?> </td>
 	</tr>
-	<tr>
+	<tr id="3">
 		<td>3</td>
-		<td></td>
-		<td></td>
+		<td class="name"> <?php echo $matching_name[2];?> </td>
+		<td class="stat"> <?php echo $matching_cnt[2];?> </td>
 	</tr>
 </table>
 
@@ -52,27 +96,22 @@ table {
 		<th>Username</th>
 		<th>Win %</th>
 	</tr>
-	<tr>
+	<tr id="1">
 		<td>1</td>
-		<td></td>
-		<td></td>
+		<td class="name"> <?php echo $chess_name[0];?> </td>
+		<td class="stat"> <?php echo $chess_per[0]*100;?> </td>
 	</tr>
-	<tr>
+	<tr id="2">
 		<td>2</td>
-		<td></td>
-		<td></td>
+		<td class="name"> <?php echo $chess_name[1];?> </td>
+		<td class="stat"> <?php echo $chess_per[1]*100;?> </td>
 	</tr>
-	<tr>
+	<tr id="3">
 		<td>3</td>
-		<td></td>
-		<td></td>
+		<td class="name"> <?php echo $chess_name[2];?> </td>
+		<td class="stat"> <?php echo $chess_per[2]*100;?> </td>
 	</tr>
 </table>
-
-
-<?php
-
-?>
 
 
 <?=template_footer()?>

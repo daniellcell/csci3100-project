@@ -27,8 +27,6 @@ SET time_zone = "+00:00";
 --
 -- 資料表結構 `chess`
 --
-CREATE DATABASE game_rank;
-USE game_rank;
 
 DROP TABLE IF EXISTS `chess`;
 CREATE TABLE IF NOT EXISTS `chess` (
@@ -43,7 +41,9 @@ CREATE TABLE IF NOT EXISTS `chess` (
 
 INSERT INTO `chess` (`username`, `win`, `played`) VALUES
 ('test', 3, 6),
-('tyy', 1, 1);
+('tyy', 1, 1),
+('test3', 9, 9),
+('test2', 31, 41);
 
 -- --------------------------------------------------------
 
@@ -63,7 +63,8 @@ CREATE TABLE IF NOT EXISTS `matching` (
 
 INSERT INTO `matching` (`username`, `cnt`) VALUES
 ('test', 20),
-('tyy', 16);
+('tyy', 16),
+('test2', 36);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
