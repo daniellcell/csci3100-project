@@ -16,8 +16,8 @@
 </head>
 
 <body>
+<div id = "b">
 	<h3 id = "det" style="text-align:center">
-		<br><br><br>
 		This is the easy version of Concentration (card matching) game.<br>
 		How to win: match all the pairs of cards.<br>
 		Less number of flips is better.
@@ -118,7 +118,7 @@
 	</script>
 	</div>
 	<input id="return" value="Return" onClick="window.location='play.php'">
-
+</div>
 </body>
 
 </html>
