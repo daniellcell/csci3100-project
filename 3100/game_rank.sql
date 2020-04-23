@@ -27,6 +27,8 @@ SET time_zone = "+00:00";
 --
 -- 資料表結構 `chess`
 --
+CREATE DATABASE game_rank;
+USE game_rank;
 
 DROP TABLE IF EXISTS `chess`;
 CREATE TABLE IF NOT EXISTS `chess` (
