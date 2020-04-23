@@ -7,11 +7,8 @@
 ?>
 
 <?=template_header('Leaderboard')?>
-
-<button onclick="window.location='index.php?page=game'">Return</button>
+<br><br><br>
 <h1 style="font-size:35px;">Top 3 Leaderboard</h1>
-<br>
-
 <style>
 table { 
 	text-align: center;
@@ -63,7 +60,7 @@ caption {
 		}
 	} 
 ?>
-
+<form class="box" method = "post">
 <table id="matching">
 	<caption>Matching</caption>
 	<tr>
@@ -112,6 +109,6 @@ caption {
 		<td class="stat"> <?php echo round($chess_per[2]*100, 3);?> </td>
 	</tr>
 </table>
-
-
+<input id="return"  type="button" value="Return" onClick="window.location='index.php?page=game'">
+</form>
 <?=template_footer()?>
