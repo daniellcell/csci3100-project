@@ -55,6 +55,7 @@
 		
 		function closeboard() {
 			$('#board').hide();
+			$('#det').hide();
 			$('#buttons').show();
 		}	
 				
