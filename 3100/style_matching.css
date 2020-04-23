@@ -61,6 +61,7 @@
 	color: #384051;
 	font-size: 24px;
 	font-weight: 1000;
+	text-align: center;
 }
 .box input[type = "button"]{
 	border:0;
