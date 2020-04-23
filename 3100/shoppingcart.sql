@@ -42,7 +42,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `img`) VALUES
-(1, 'Chess', '20.00', 'chess.png'),
+(1, 'Chess', '20.00', 'chess.jpg'),
 (2, 'Chinese Chess', '20.00', 'chinesechess.jpg'),
 (3, 'Monopoly', '60.00', 'monopoly.jpg'),
 (4, 'Six Men\'s Morris', '20.00', 'sixmensmorris.jpg');
