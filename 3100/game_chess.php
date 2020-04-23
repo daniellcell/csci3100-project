@@ -126,7 +126,7 @@
 				
 				// computer's turn (random)
 				while (check == 0) {
-					var pick = Math.floor(Math.random()*7) - 1;
+					var pick = Math.floor(Math.random()*7);
 					i = base[pick];
 					while (i>=0 && check == 0) {
 						if ($("span[id=" + i + "]").text() == ".") {
