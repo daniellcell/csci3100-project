@@ -143,87 +143,6 @@ main > .home {
 	-o-user-select: none;
 	user-select: none;
 }
-main .products .products-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-	padding: 40px 0 0 0;
-}
-
-main .products .products-wrapper .product {
-		display: block;
-		overflow: hidden;
-		text-decoration: none;
-		width: 25%;
-		padding-bottom: 60px;
-	}
-
-main .products .products-wrapper .product img {
-			transform: scale(1);
-			transition: transform 1s;
-		}
-
-main .products .products-wrapper .product .name {
-			display: block;
-			color: #555555;
-			padding: 20px 0 2px 0;
-		}
-main .products .products-wrapper .product .price {
-			display: block;
-			color: #999999;
-		}
-
-main .products .products-wrapper .product .rrp {
-			color: #BBBBBB;
-			text-decoration: line-through;
-		}
-
-main .products .products-wrapper .product:hover img {
-			transform: scale(1.05);
-			transition: transform 1s;
-		}
-
-main .products .products-wrapper .product:hover .name {
-			text-decoration: underline;
-		}
-main .products .products-wrapper form {
-		display: flex;
-		flex-flow: column;
-		margin: 40px 0;
-}
-main .products .products-wrapper form input[type="text"] {
-		width: 400px;
-		padding: 10px;
-		margin-bottom: 15px;
-		border: 1px solid #ccc;
-		color: #555555;
-		border-radius: 5px;
-	}
-main > .product form input[type="submit"] {
-	background: #4e5c70;
-	border: 0;
-	color: #FFFFFF;
-	width: 400px;
-	padding: 12px 0;
-	text-transform: uppercase;
-	font-size: 14px;
-	font-weight: bold;
-	border-radius: 5px;
-	cursor: pointer;
-}
-main > .product form input[type="submit"]:hover {
-	background: #434f61;
-}
-main > .products h1 {
-	display: block;
-	font-weight: normal;
-	margin: 0;
-	padding: 40px 0;
-	font-size: 24px;
-	text-align: center;
-	width: 100%;
-}
 main .cart h1 {
 	display: block;
 	font-weight: normal;
@@ -254,8 +173,14 @@ main .cart table tbody td:last-child {
 main .cart table .img {
 	width: 80px;
 }
+
+main .cart table .name {
+	color: #EEEEEE;
+	padding-top: 3px;
+}
+
 main .cart table .remove {
-	color: #777777;
+	color: #EEEEEE;
 	font-size: 12px;
 	padding-top: 3px;
 }
@@ -263,18 +188,13 @@ main .cart table .remove:hover {
 	text-decoration: underline;
 }
 main .cart table .price {
-	color: #999999;
+	color: #EEEEEE;
 }
-main .cart table a {
-	text-decoration: none;
-	color: #555555;
-}
-main .cart table input[type="number"] {
+main .cart table input[type="text"] {
 	width: 68px;
 	padding: 10px;
 	border: 1px solid #ccc;
 	color: #555555;
-	border-radius: 5px;
 }
 main .cart .subtotal {
 	text-align: right;
