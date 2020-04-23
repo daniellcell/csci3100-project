@@ -13,7 +13,7 @@
       display: flex;
       justify-content: center;
     }
-
+    /*message output area */
     #message-container {
       width: 90%;
       max-width: 600px;
@@ -39,6 +39,7 @@
       color: MediumSpringGreen;
     }
 
+    /*message input + send button area */
     #send-container {
       position: fixed;
       padding-bottom: 0px;
@@ -64,8 +65,8 @@
       transition: 0.25s;
     }
 
-  #message-input:focus{
-    border-color: Chartreuse;
+    #message-input:focus{
+      border-color: Chartreuse;
     }
     #send-button {
       border:0;
@@ -83,6 +84,25 @@
     }
     #send-button:hover{
       background: CornflowerBlue;
+    }
+
+    /* scroll bar */
+    ::-webkit-scrollbar {
+      width: 15px;
+    }
+
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 24px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: grey; 
+      border-radius: 24px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: SlateBlue; 
     }
   </style>
   </head>
