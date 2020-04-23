@@ -63,7 +63,6 @@ CREATE TABLE IF NOT EXISTS `matching` (
 
 INSERT INTO `matching` (`username`, `cnt`) VALUES
 ('test', 20),
-('tyy', 16),
 ('test2', 36);
 COMMIT;
 
