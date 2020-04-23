@@ -6,10 +6,10 @@
 	}	
 ?>
 
-<?=template_header('Rank')?>
+<?=template_header('Leaderboard')?>
 
 <button onclick="window.location='index.php?page=game'">Return</button>
-<h1 style="font-size:35px;">Leaderboard</h1>
+<h1 style="font-size:35px;">Top 3 Leaderboard</h1>
 <br>
 
 <style>
