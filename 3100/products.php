@@ -87,11 +87,11 @@ h1 {
         <div>
         <tr>
         <td></td>
+        <td><?php if ($current_page > 1): ?>
+            <a href="index.php?page=products&p=<?=$current_page-1?>" style= "color:#384051">Prev</a>
+        <?php endif; ?></td>
         <td></td>
         <td>
-        <?php if ($current_page > 1): ?>
-            <a href="index.php?page=products&p=<?=$current_page-1?>" style= "color:#384051">Prev</a>
-        <?php endif; ?>
         <?php if ($total_products > ($current_page * $num_products_on_each_page) - $num_products_on_each_page + count($products)): ?>
             <a href="index.php?page=products&p=<?=$current_page+1?>" style= "color:#384051">Next</a>
         <?php endif; ?>
