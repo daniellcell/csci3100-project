@@ -15,24 +15,33 @@
     }
 
     #message-container {
-      width: 80%;
-      max-width: 500px;
+      width: 90%;
+      max-width: 600px;
+      height: 750px;
+      overflow: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-55%);
+      text-align: center;
+      border-radius: 30px;
+      border: 2px solid MidnightBlue;
     }
 
     #message-container div {
       padding: 5px;
       word-wrap: break-word;
-      color: DeepSkyBlue;
+      color: Black;
     }
 
     #message-container div:nth-child(2n) {
       word-wrap: break-word;
-      color: LawnGreen;
+      color: MediumSpringGreen;
     }
 
     #send-container {
       position: fixed;
-      padding-bottom: 20px;
+      padding-bottom: 0px;
       bottom: 0;
       max-width: 600px;
       width: 80%;
@@ -78,7 +87,8 @@
   </style>
   </head>
   <body>
-    <div id="message-container" style="overflow:auto"></div>
+    <h1>Board Game Platform Chatroom</h1>
+    <div id="message-container"></div>
     <form id="send-container">
       <input type="text" id="message-input" placeholder="Enter your message here">
       <button type="submit" id="send-button">Send</button>
