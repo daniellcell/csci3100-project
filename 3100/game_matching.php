@@ -19,7 +19,7 @@
 
 	<div id="buttons" style="text-align:center" class = "box">
 		<h1>Game end! <br> You flipped cards <span id="clickcount">0</span> times</h1>
-		<form action="submit_rank.php" method="box">
+		<form action="submit_rank.php" method="post">
 			<input id="result" name="result" type="number" style="display:none">
 			<input id="gamename" name="gamename" type="text" value="matching" style="display:none">
 			<input id="rank" type="button" value="Submit result" onClick="this.form.submit();">
