@@ -20,19 +20,20 @@
     }
 
     #message-container div {
-      background-color: rgb(24, 164, 199);
       padding: 5px;
+      word-wrap: break-word;
+      color: DeepSkyBlue;
     }
 
     #message-container div:nth-child(2n) {
-      background-color: rgb(17, 182, 86);
+      word-wrap: break-word;
+      color: LawnGreen;
     }
 
     #send-container {
       position: fixed;
-      padding-bottom: 30px;
+      padding-bottom: 20px;
       bottom: 0;
-      background-color: rgb(255, 255, 255);
       max-width: 600px;
       width: 80%;
       display: flex;
@@ -40,14 +41,30 @@
 
     #message-input {
       flex-grow: 1;
+      border:0;
+      background: none;
+      display: block;
+      margin: 20px auto;
+      text-align: center;
+      border: 2px solid black;
+      padding: 14px 10px;
+      width: 200px;
+      outline: none;
+      color: black;	
+      border-radius: 24px;
+      transition: 0.25s;
+    }
+
+  #message-input:focus{
+    border-color: Chartreuse;
     }
     #send-button {
       border:0;
-      background: orange;
+      background: crimson;
       display: block;
       margin: auto;
       text-align: center;
-      border: 2px solid #4614f8;
+      border: 2px solid DarkBlue;
       padding: 14px 20px;
       outline: none;
       color: black;
@@ -56,14 +73,14 @@
       cursor: pointer;
     }
     #send-button:hover{
-      background: #e4426a;
+      background: CornflowerBlue;
     }
   </style>
   </head>
   <body>
-    <div id="message-container"></div>
+    <div id="message-container" style="overflow:auto"></div>
     <form id="send-container">
-      <input type="text" id="message-input">
+      <input type="text" id="message-input" placeholder="Enter your message here">
       <button type="submit" id="send-button">Send</button>
     </form>
   </body>
