@@ -18,7 +18,8 @@
 <body>
 	<h3 id = "det" style="text-align:center">
 		This is a simplified version of 'Connect Four'.<br>
-		How to win: get 4-in-a-row / 4-in-a-column.
+		How to win: get 4-in-a-row / 4-in-a-column.<br>
+		You can start your turn first.
 	</h3>
 	<div id="buttons" style="text-align:center" class = "box">
 		<h1>Game End!<h1/><text id = "end"></text>
