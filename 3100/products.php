@@ -26,29 +26,75 @@ else{
         $total_products = $pdo->query('SELECT * FROM products')->rowCount();
 }
 ?>
+<style type="text/css">
+@import "style.css";
+
+h1 {
+	display: block;
+	font-weight: bold;
+	margin: 0;
+	padding: 40px 0;
+	font-size: 36px;
+	text-align: center;
+	width: 100%;
+}
+#products {
+	background-color: rgba(202, 214, 240, 0.6);
+	width: 50%;
+	border-radius: 30px;
+	text-align: center;
+	color: #384051;
+	padding-right: 40px;
+	border-radius: 20px;
+	position: absolute;
+	top: 50%;
+	left: 52%;
+	transform: translate(-50%,-50%);
+}
+
+</style>
 
 <div class="products content-wrapper">
     <h1>Products</h1>
-    <p> Total number of products: <?=$total_products?> Products</p>
-    <div>
+	<form action="index.php?page=cart" method="post">
+    Total number of products: <?=$total_products?>
+	<table id = "products">
+    <thead>
+    <tr>
+		<td>Product</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Quantity</td>
+	</tr>
+    </thead>
+    <tbody>
         <?php foreach ($products as $product): ?>
-            <form action="index.php?page=cart" method="post">
-                <img src="imgs/<?=$product['img']?>" width="100" height="100" alt="<?=$product['name']?>">
-                <span ><?=$product['name']?></span>
-                <span >&dollar;<?=$product['price']?></span>
-                <input type="text" name="quantity" size="4">
-                <input type="hidden" name="product_id" value="<?=$product['id']?>">
-                <input type="submit" value="Add To Cart">
-            </form>
+			<tr>
+				<form action="index.php?page=cart" method="post">
+					<td class="img">
+					<img src="imgs/<?=$product['img']?>" width="100" height="100" alt="<?=$product['name']?>"></td>
+					<td class="name">
+					<span ><?=$product['name']?></span></td>
+					<td class="price">
+					<span >&dollar;<?=$product['price']?></span></td>
+					<td class="quantity">
+					<input type="text" name="quantity" size="4"></td>
+					<input type="hidden" name="product_id" value="<?=$product['id']?>">
+					<td class="price">
+					<input type="submit" value="Add To Cart"></td>
+				</form>
+			</tr>
         <?php endforeach; ?>
         <div>
         <?php if ($current_page > 1): ?>
-            <a href="index.php?page=products&p=<?=$current_page-1?>" style= "color:White">Prev</a>
+            <a href="index.php?page=products&p=<?=$current_page-1?>" style= "color:#384051">Prev</a>
         <?php endif; ?>
         <?php if ($total_products > ($current_page * $num_products_on_each_page) - $num_products_on_each_page + count($products)): ?>
-            <a href="index.php?page=products&p=<?=$current_page+1?>" style= "color:White">Next</a>
+            <a href="index.php?page=products&p=<?=$current_page+1?>" style= "color:#384051">Next</a>
         <?php endif; ?>
-        </div>
-        <br />
+	</tbody>
+    </table>
+    <br/>
     </div>
+	</form>
 </div>
