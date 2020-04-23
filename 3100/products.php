@@ -55,9 +55,7 @@ h1 {
 </style>
 
 <div class="products content-wrapper">
-    <h1>Products</h1>
 	<form action="index.php?page=cart" method="post">
-    Total number of products: <?=$total_products?>
 	<table id = "products">
     <thead>
     <tr>
@@ -65,6 +63,7 @@ h1 {
         <td>Name</td>
         <td>Price</td>
         <td>Quantity</td>
+        <td>Total: <?=$total_products?></td>
 	</tr>
     </thead>
     <tbody>
@@ -86,12 +85,18 @@ h1 {
 			</tr>
         <?php endforeach; ?>
         <div>
+        <tr>
+        <td></td>
+        <td></td>
+        <td>
         <?php if ($current_page > 1): ?>
             <a href="index.php?page=products&p=<?=$current_page-1?>" style= "color:#384051">Prev</a>
         <?php endif; ?>
         <?php if ($total_products > ($current_page * $num_products_on_each_page) - $num_products_on_each_page + count($products)): ?>
             <a href="index.php?page=products&p=<?=$current_page+1?>" style= "color:#384051">Next</a>
         <?php endif; ?>
+        </td>
+        </tr>
 	</tbody>
     </table>
     <br/>
