@@ -16,7 +16,7 @@ socket.on('user-connected', name => {
 })
 
 socket.on('user-disconnected', name => {
-  appendMessage(`${name} disconnected to the chatroom`)
+  appendMessage(`${name} disconnected from the chatroom`)
 })
 
 messageForm.addEventListener('submit', e => {
