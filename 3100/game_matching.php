@@ -1,8 +1,11 @@
 <?php
+	include 'functions.php';
 	if (!isset($_SESSION)) {
 		session_start();
 	}	
 ?>
+<?=template_header('Card matching')?>
+<?=template_footer()?>
 
 <html>
 
