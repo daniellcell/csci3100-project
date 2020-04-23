@@ -52,7 +52,6 @@ h1, h2, h3, h4, h5 {
 .content-wrapper {
 	width: auto;
 	margin: auto;
-	background-color: #4A556F;
 	padding-left: 50px;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -65,6 +64,7 @@ header {
 }
 header .content-wrapper {
 	display: flex;
+	background-color:  rgba(74, 85, 111, 0.8);
 }
 header h1 {
 	display: flex;
@@ -100,11 +100,11 @@ header .link-icons {
 }
 header .link-icons a {
 	text-decoration: none;
-	color: #394352;
+	color: #C1CCDB;
 	padding: 0 10px;
 }
 header .link-icons a:hover {
-	color: #4e5c70;
+	color: #EEF2F7;
 }
 header .link-icons a i {
 	font-size: 18px;
@@ -143,19 +143,53 @@ main > .home {
 	-o-user-select: none;
 	user-select: none;
 }
+
+table {
+	width: 100%;
+	padding-right: 40px;
+	border-radius: 20px;
+	background-color: rgba(202, 214, 240, 0.6);
+	color: #394253;
+}
+
+table input[type="text"] {
+	width: 68px;
+	padding: 10px;
+	border-radius: 20px;
+	background-color: rgba(202, 214, 240, 0.6);
+	border: 1px solid #909EBC;
+	color: #384051;
+	text-align: right;
+}
+
+input[type="submit"] {
+	margin-left: 5px;
+	padding: 12px 20px;
+	border: 0;
+	background-color: rgba(202, 214, 240, 0.6);
+	color: #384051;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: 0.25s;
+}
+
+input[type="submit"]:hover {
+	background-color: rgba(57, 66, 83, 0.6);
+	color: #E8ECF4;
+}
+
 main .cart h1 {
 	display: block;
-	font-weight: normal;
+	font-weight: bold;
 	margin: 0;
 	padding: 40px 0;
-	font-size: 24px;
+	font-size: 36px;
 	text-align: center;
 	width: 100%;
 }
-main .cart table {
-	width: 100%;
-	padding-right: 40px;
-}
+
 main .cart table thead td {
 	padding: 30px 0;
 	border-bottom: 1px solid #EEEEEE;
@@ -172,32 +206,33 @@ main .cart table tbody td:last-child {
 }
 main .cart table .img {
 	width: 80px;
+	position: relative;
+	left: 4%;
 }
 
 main .cart table .name {
-	color: #EEEEEE;
+	color: #384051;
 	padding-top: 3px;
+	position: relative;
+	right: 2%;
 }
 
 main .cart table .remove {
-	color: #EEEEEE;
+	color: #384051;
 	font-size: 12px;
 	padding-top: 3px;
+	
 }
 main .cart table .remove:hover {
 	text-decoration: underline;
+	color: #737E98;
 }
 main .cart table .price {
-	color: #EEEEEE;
-}
-main .cart table input[type="text"] {
-	width: 68px;
-	padding: 10px;
-	border: 1px solid #ccc;
-	color: #555555;
+	color: #384051;
 }
 main .cart .subtotal {
 	text-align: right;
+	color: #C1CCDB;
 	padding: 40px 0;
 }
 main .cart .subtotal .text {
@@ -206,28 +241,13 @@ main .cart .subtotal .text {
 }
 
 main .cart .subtotal .price {
-		padding-right: 40px;
-		font-size: 18px;
-		color: #999999;
+	padding-right: 40px;
+	font-size: 18px;
 }
 
 main .cart .buttons {
 	text-align: right;
 	padding-bottom: 40px;
-}
-main .cart .buttons input[type="submit"] {
-	margin-left: 5px;
-	padding: 12px 20px;
-	border: 0;
-	background: #4e5c70;
-	color: #FFFFFF;
-	font-size: 14px;
-	font-weight: bold;
-	cursor: pointer;
-	border-radius: 5px;
-}
-main .cart .buttons input[type="submit"]:hover {
-	background: #434f61;
 }
 main .placeorder h1 {
 	display: block;
@@ -246,10 +266,10 @@ footer {
 	bottom: 0;
 	border-top: 1px solid #212D43;
 	text-align: left;
-	padding: 5px;
 	width: 100%;
-	background-color: #4A556F;
+	background-color:  rgba(74, 85, 111, 0.8);
 }
+
 /* --------------box------------ */
 .box{
 	width: 500px;
@@ -258,8 +278,7 @@ footer {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	background: #CAD6F0;
-	opacity: 0.6;
+	background-color: rgba(202, 214, 240, 0.6);
 	text-align: center;
 	border-radius: 30px;
 	color: #384051;
@@ -308,7 +327,7 @@ footer {
 	cursor: pointer;
 }
 .box input[type = "submit"]:hover{
-	background: #394253;
+	background-color: rgba(57, 66, 83, 0.6);
 	color: #E8ECF4;
 }
 .box input[type = "button"]{
@@ -326,7 +345,7 @@ footer {
 	cursor: pointer;
 }
 .box input[type = "button"]:hover{
-  	background: #394253;
+  	background-color: rgba(57, 66, 83, 0.6);
 	color: #E8ECF4;
 }
 /* new */
