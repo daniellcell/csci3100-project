@@ -6,7 +6,8 @@
 4. Open your browser, type localhost/phpmyadmin/
 5. Import **login.sql** into localhost database (contain one set of user, username:test password:1234)
 6. Import **shoppingcart.sql** into localhost database (contain the products information)
-7. Modify any php or css files you want and type localhost/3100/xxx.php in your browser to view changes. 
+7. Import **game_rank.sql** into localhost database (contain 2 tables, they are ranks for 2 games respectively)
+8. Modify any php or css files you want and type localhost/3100/xxx.php in your browser to view changes. 
 ----------------------------------------------------------
 Failed to connect MySQL,
 change process_r.php and prcoess.php the following:
