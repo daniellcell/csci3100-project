@@ -23,6 +23,7 @@
 
 <body>
 	<h3 style="text-align:center">
+		This is a simplified version of 'Connect Four'.<br>
 		How to win: get 4-in-a-row / 4-in-a-column.
 	</h3>
 	<div id="buttons" style="text-align:center">
