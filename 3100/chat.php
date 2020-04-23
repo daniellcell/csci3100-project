@@ -1,3 +1,4 @@
+<?=template_header('Chatroom')?>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +9,29 @@
   <link href="style.css" rel="stylesheet" type="text/css">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
-    body {
-      padding: 0;
-      margin: 0;
-      justify-content: center;
-    }
+	#b {
+      position: absolute;
+      left: 35%;
+	  overflow: visible;
+	}
 	h1{
 		display: block;
 		font-weight: bold;
-		margin: 0;
-		padding: 20px 0;
 		font-size: 24px;
 		text-align: center;
 		width: 100%;
+		position: relative;
 	}
     /*message output area */
     #message-container {
 	  background-color: rgba(202, 214, 240, 0.6);
       width: 90%;
-      max-width: 600px;
+      width: 600px;
       height: 600px;
       overflow: auto;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-55%);
       text-align: center;
       border-radius: 30px;
+	  position: relative;
     }
 
     #message-container div {
@@ -51,17 +48,17 @@
 
     /*message input + send button area */
     #send-container {
-      position: fixed;
+      position: relative;
       padding-bottom: 100px;
       bottom: 0;
       max-width: 600px;
-      width: 80%;
-      display: flex;
-	  left: 34.5%;
+	  width: 80%;
+	  display: flex;
+	  left: 10%;
     }
 
     #message-input {
-      flex-grow: 1;
+	  flex-grow: 1;
       border:0;
       background: none;
       display: block;
@@ -120,11 +117,19 @@
   </style>
   </head>
   <body>
+  <div id = "b">
     <h1>Chatroom</h1>
     <div id="message-container"></div>
     <form id="send-container">
       <input type="text" id="message-input" placeholder="Enter your message here">
       <button type="submit" id="send-button">Send</button>
     </form>
-  </body>
+  </div>
+        </main>
+        <footer>
+            <div class="content-wrapper">
+                <p>&copy; $year, Board Game Platform</p>
+            </div>
+        </footer>
+    </body>
 </html>
