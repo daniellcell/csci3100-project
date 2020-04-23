@@ -17,10 +17,10 @@
 		$gamename = $_POST['gamename'];
 		$username = $_SESSION['loginuser'];
 		
-		echo
+		/*echo
 		"<script>
 			alert($result);
-		</script>";
+		</script>";*/
 		
 		$gamename = stripcslashes($gamename);
 		$gamename = mysqli_real_escape_string($con, $gamename);
@@ -33,58 +33,39 @@
 		if ($exist['count(*)'] == 1){			// already have rank			
 			if ($gamename == "chess") {
 				$sql = "UPDATE chess SET username='$username', win=win+$result, played=played+1 WHERE username='$username'";
-				if (mysqli_query($con, $sql) === TRUE) {
-					echo
-					"<script>
-						alert('Submitted :D');
-						window.location.href='index.php?page=game';
-					</script>";
-				} else {
-					echo "Failed to add rank ".mysqli_error($con);
-				}
 			}
-
 			else if ($gamename == "matching") {
 				$sql = "UPDATE matching SET username='$username', cnt=$result WHERE username='$username' and cnt>$result";
-				if (mysqli_query($con, $sql) === TRUE) {
-					echo
-					"<script>
-						alert('Submitted :D');
-						window.location.href='index.php?page=game';
-					</script>";
-				} else {
-					echo "Failed to add rank ".mysqli_error($con);
-				}
 			}
 			
+			if (mysqli_query($con, $sql) === TRUE) {
+				echo
+				"<script>
+					alert('Submitted :D');
+					window.location.href='index.php?page=game';
+				</script>";
+			} else {
+				echo "Failed to add rank ".mysqli_error($con);
+			}
 			
 		}
 		else if ($exist['count(*)'] == 0){		// not yet recorded in the leaderboard
 			if ($gamename == "chess") {
 				$sql = "INSERT INTO chess (username, win, played) VALUES ('$username', $result, 1)";
-				if (mysqli_query($con, $sql) === TRUE) {
-					echo
-					"<script>
-						alert('Submitted :D');
-						window.location.href='index.php?page=game';
-					</script>";
-				} else {
-					echo "Failed to add rank ".mysqli_error($con);
-				}
 			}
 			else if ($gamename == "matching") {
-				$sql = "INSERT INTO matching (username, cnt) VALUES ('$username', $result)";
-				if (mysqli_query($con, $sql) === TRUE) {
-					echo
-					"<script>
-						alert('Submitted :D');
-						window.location.href='index.php?page=game';
-					</script>";
-				} else {
-					echo "Failed to add rank ".mysqli_error($con);
-				}				
+				$sql = "INSERT INTO matching (username, cnt) VALUES ('$username', $result)";			
 			}
 			
+			if (mysqli_query($con, $sql) === TRUE) {
+				echo
+				"<script>
+					alert('Submitted :D');
+					window.location.href='index.php?page=game';
+				</script>";
+			} else {
+				echo "Failed to add rank ".mysqli_error($con);
+			}
 		}
 		
 	
