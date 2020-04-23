@@ -1,6 +1,8 @@
 <!--HAVE BUG!!! but idk where :(
-	plz don't try yet, will GG seriously
-	if tried and sometimes sno response, plz restart the wampserver and use another browser..-->
+	plz don't play too seriously (until only few holes are left), will GG
+	but for simple demo (e.g. connect-4 in 4 rounds) is ok lol
+	if u tried and sometimes no response, plz restart the wampserver and use another browser..
+	(welcome to help debug hahaha)-->
 	
 <?php
 	include 'functions.php';
@@ -60,11 +62,9 @@
 		}	
 		
 		function checkend(cur, col, name) {
-			//alert(col);
-			var i = cur;
-			var cnt = 0;
-			
 			// check column
+			var i = cur;
+			var cnt = 0;			
 			while (i < size && cnt <= 4) {
 				if ($("span[id=" + i + "]").hasClass(name)) {
 					cnt++;
@@ -74,11 +74,30 @@
 			}
 			if (cnt == 4) return 1;
 			
+			// check row
+			var row = Math.floor(cur/7);
+			var left = 7*row;
+			var right = left+6;
+			cntL = 0;
+			cntR = 0;
 			
 			i = cur;
-			cnt = 0;
-			// check row
-			// TO DO.. /_\
+			while (i>=left) {
+				if ($("span[id=" + i + "]").hasClass(name)) {
+					cntL++;
+					i--;
+				}			
+				else break;
+			}
+			i = cur+1;
+			while (i<=right) {
+				if ($("span[id=" + i + "]").hasClass(name)) {
+					cntR++;
+					i++;
+				}			
+				else break;
+			}
+			if ((cntL+cntR) >= 4) return 1;
 
 			return 0;
 		}
