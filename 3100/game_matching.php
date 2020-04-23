@@ -16,7 +16,12 @@
 </head>
 
 <body>
-
+	<h3 id = "det" style="text-align:center">
+		This is the easy version of Concentration (card matching) game.<br>
+		How to win: match all the pairs of cards.
+		Less number of flips is better.
+	</h3>
+	
 	<div id="buttons" style="text-align:center" class = "box">
 		<h1>Game end! <br> You flipped cards <span id="clickcount">0</span> times</h1>
 		<form action="submit_rank.php" method="post">
