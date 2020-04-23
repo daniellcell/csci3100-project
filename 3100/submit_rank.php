@@ -69,7 +69,7 @@
 	else {	
 		echo
 		"<script>
-			alert('Visitors cannot submit rank');
+			alert('Visitors cannot submit result.');
 			window.location.href='index.php?page=game';
 		</script>";
 	}
