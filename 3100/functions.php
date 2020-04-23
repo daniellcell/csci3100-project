@@ -28,7 +28,7 @@ echo <<<EOT
         <header>
             <div class="content-wrapper">
 				<nav>
-                <img src="imgs/chess.png" height="64" width="64">
+                <img draggable="false" src="imgs/chess.png" height="64" width="64">
                 <h1>Board Game Platform</h1>
 				</nav>
                 <nav>
