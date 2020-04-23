@@ -43,8 +43,15 @@ echo <<<EOT
                     </a>
                 </div>
                 <nav>
-                    <a href="index.php?page=login_check">Login</a>
-                    <a href="index.php?page=logout">Logout</a>
+EOT;
+	if (isset($_SESSION['loginuser'])) {
+		echo "Hi, ".$_SESSION['loginuser'];
+		echo '<a href="index.php?page=logout">Logout</a>';
+	} else {
+		echo '<a href="index.php?page=login_check">Login</a>';
+	}
+
+echo <<<EOT
                 </nav>
             </div>
         </header>
