@@ -16,6 +16,7 @@
 </head>
 
 <body>
+<div id = "b">
 	<h4 id = "det" style="text-align:center">
 		This is a simplified version of 'Connect Four'.<br>
 		How to win: get 4-in-a-row / 4-in-a-column.<br>
@@ -172,7 +173,7 @@
 	</script>
 	</div>
 	<input id="return" value="Return" onClick="window.location='play.php'">
-
+</div>
 </body>
 
 </html>
