@@ -18,8 +18,7 @@
 <body>
 
 	<div id="buttons" style="text-align:center" class = "box">
-		<p align="center"><h1>You flipped cards <span id="clickcount">0</span> times</h1></p>
-		
+		<h1>Game end! <br> You flipped cards <span id="clickcount">0</span> times</h1>
 		<form action="submit_rank.php" method="box">
 			<input id="result" name="result" type="number" style="display:none">
 			<input id="gamename" name="gamename" type="text" value="matching" style="display:none">
@@ -96,7 +95,6 @@
 					document.getElementById("rank").disabled = false;
 					document.getElementById("result").setAttribute("value", cnt);
 					closeboard();
-					alert("Game end!");
 				}
 				
 				
