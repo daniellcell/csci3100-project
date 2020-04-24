@@ -23,12 +23,13 @@
 		You can start your turn first.
 	</h4>
 	<div id="buttons" style="text-align:center" class = "box">
-		<h2>Game End!<h2/><text id = "end"></text>
+		<h3>Game End!<br><text id = "end"></text>
 		<form action="submit_rank.php" method="post">
 			<input id="result" name="result" type="number" style="display:none">
 			<input id="gamename" name="gamename" type="text" value="chess" style="display:none">
 			<input id="rank" type="button" value="Submit result" onClick="this.form.submit();">
 		</form>
+		<input id="return01" type="button" value="Return" onClick="window.location='play.php'">
 	</div>
 
 	<div id="board">	
@@ -56,6 +57,7 @@
 		function closeboard() {
 			$('#board').hide();
 			$('#det').hide();
+			$('#return').hide();
 			$('#buttons').show();
 		}	
 		
@@ -123,7 +125,7 @@
 				var finish = checkend(cur, col, "player");		// player
 				if (finish == 1) {
 					document.getElementById("rank").disabled = false;
-					$('#end').append("<h3>You win!</h3>");
+					$('#end').append("You win!</h3>");
 					closeboard();
 					document.getElementById("result").setAttribute("value", 1);
 					
@@ -148,7 +150,7 @@
 				var finish = checkend(com, pick, "computer");		// computer
 				if (finish == 1) {
 					document.getElementById("rank").disabled = false;
-					$('#end').append("<h3>Computer win!</h3>");
+					$('#end').append("Computer win!</h3>");
 					closeboard();
 					document.getElementById("result").setAttribute("value", 0);
 				}	
@@ -156,7 +158,7 @@
 				if (finish == 0 && cnt == size) {	// if all holes are occupied
 					finish = 1;
 					document.getElementById("rank").disabled = false;
-					$('#end').append("<h3>Draw!</h3>");
+					$('#end').append("Draw!</h3>");
 					closeboard();
 					document.getElementById("result").setAttribute("value", 0);
 				}
