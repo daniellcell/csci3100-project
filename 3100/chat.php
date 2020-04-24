@@ -128,7 +128,7 @@
         </main>
         <footer>
             <div class="content-wrapper">
-                <p>&copy; $year, Board Game Platform</p>
+                <p>&copy; 2020, Board Game Platform</p>
             </div>
         </footer>
     </body>
