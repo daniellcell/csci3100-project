@@ -10,16 +10,6 @@
 	background-color: rgba(74, 85, 111, 0.8);
 	border-radius: 30px;
 }
-h2{
-	color: #384051;
-	font-size: 72pt;
-}
-
-h3{
-	color: #384051;
-	font-size: 50pt;
-}
-
 .hole {
 	width: 75px;
 	height: 75px;
@@ -71,5 +61,4 @@ h3{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	
 }
