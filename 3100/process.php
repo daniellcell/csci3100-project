@@ -22,13 +22,13 @@ if (!isset($_SESSION)) {
 	$result = mysqli_query($con,"select * from users where username = '$username' and password = '$password'")
 				or die("Failed to connect mySQL ".mysqli_error($con));
 	$row = mysqli_fetch_array($result);
-	if ($row['username'] == $username && $row['password'] == $password && $row['username'] != ''){
+	if ($row['username'] == $username && $row['password'] == $password && $row['username'] != ''){ // check whether such username exists and the password matches the username in database
 		$_SESSION['loginuser'] = $username;
 		echo "<script>
 		alert('Success! Welcome User {$row['username']}');
 		window.location.href='index.php?page=home';
 		</script>";
-	} else{
+	} else{ // wrong username or password
 		echo "<script>
 		alert('Wrong Username / Password');
 		window.location.href='index.php?page=login';
