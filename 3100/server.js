@@ -1,7 +1,9 @@
+// server side = localhost
 const io = require('socket.io')(3000)
 
 const users = {}
 
+// all the chatroom's information stored in server side
 io.on('connection', socket => {
   socket.on('new-user', name => {
     users[socket.id] = name
