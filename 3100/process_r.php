@@ -27,22 +27,22 @@ if (!isset($_SESSION)) {
 				or die("Failed to connect mySQL 2 ".mysqli_error($con));
 	$row = mysqli_fetch_array($result);
 	
-	if (($row['username'] == $username && $row['username'] != '') || $username == ''){
+	if (($row['username'] == $username && $row['username'] != '') || $username == ''){ // check username's validity 
 		echo "<script>
 		alert('Username is invalid / already been used!');
 		window.location.href='index.php?page=register';
 		</script>";
-	} elseif ($password != $password2) {
+	} elseif ($password != $password2) { // check if the first password equals to second password
 		echo "<script>
 		alert('Passwords are not the same!');
 		window.location.href='index.php?page=register';
 		</script>";
-	} elseif ($password == '' || $password2 == '') {
+	} elseif ($password == '' || $password2 == '') { // check if any password is emppty
 		echo "<script>
 		alert('Empty Password!');
 		window.location.href='index.php?page=register';
 		</script>";
-	} else {			
+	} else { // valid username and password
 			$sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
 			if (mysqli_query($con, $sql) === TRUE) {
 				$_SESSION['loginuser'] = $username;
