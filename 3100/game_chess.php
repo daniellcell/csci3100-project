@@ -22,6 +22,8 @@
 		How to win: get 4-in-a-row / 4-in-a-column.<br>
 		You can start your turn first.
 	</h4>
+	
+	<!--only appears when the game ends-->
 	<div id="buttons" style="text-align:center" class = "box">
 		<h3>Game End!<br><text id = "end"></text>
 		<form action="submit_rank.php" method="post">
@@ -41,9 +43,9 @@
 									".", ".", ".", ".", ".", ".", ".", 
 									".", ".", ".", ".", ".", ".", "."];		// 7x6 board
 		var size = board_arr.length;
-		var finish = 0;
-		var base = [35, 36, 37, 38, 39, 40, 41];
-		var cnt = 0;
+		var finish = 0;		// whether the game ends
+		var base = [35, 36, 37, 38, 39, 40, 41];		// index of hole at the bottom row
+		var cnt = 0;	// how many holes are occupied
 
 		function initialize() {
 			var id = 0;
@@ -54,6 +56,7 @@
 			}
 		}
 		
+		// close the game board and show buttons for submit rank / return
 		function closeboard() {
 			$('#board').hide();
 			$('#det').hide();
@@ -82,7 +85,7 @@
 			cntR = 0;
 			
 			i = cur;
-			while (i>=left) {
+			while (i>=left) {	// check for left hand side first
 				if ($("span[id=" + i + "]").hasClass(name)) {
 					cntL++;
 					i--;
@@ -90,7 +93,7 @@
 				else break;
 			}
 			i = cur+1;
-			while (i<=right) {
+			while (i<=right) {	// then check for right hand side
 				if ($("span[id=" + i + "]").hasClass(name)) {
 					cntR++;
 					i++;
@@ -155,7 +158,7 @@
 					document.getElementById("result").setAttribute("value", 0);
 				}	
 				
-				if (finish == 0 && cnt == size) {	// if all holes are occupied
+				if (finish == 0 && cnt == size) {	// if all holes are occupied, it is a Draw game
 					finish = 1;
 					document.getElementById("rank").disabled = false;
 					$('#end').append("Draw!</h3>");

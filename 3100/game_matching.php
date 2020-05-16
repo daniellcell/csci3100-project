@@ -23,6 +23,7 @@
 		Less number of flips is better.
 	</h3>
 	
+	<!--only appears when the game ends-->
 	<div id="buttons" style="text-align:center" class = "box">
 		<h1>Game end! <br> You flipped cards <span id="clickcount">0</span> times</h1>
 		<form action="submit_rank.php" method="post">
@@ -37,8 +38,8 @@
 	<script type="text/javascript">
 		var cards_arr = ["P", "P", "L", "L", "A", "A", "T", "T", "F", "F", "O", "O", "R", "R", "M", "M"];
 		var cardsno = cards_arr.length;
-		var finish = 0;
-		var cnt = 0;
+		var finish = 0;		// whether the game ends
+		var cnt = 0;		// flipped cards for how many times
 
 		function shuffle() {
 			var i = cardsno;
@@ -54,6 +55,7 @@
 			}
 		}
 		
+		// close the game board and show buttons for submit rank / return
 		function closeboard() {
 			$('#board').hide();
 			$('#det').hide();
@@ -98,6 +100,7 @@
 					finish = 1;
 				}
 				
+				// close the gameboard and display other buttons
 				if (finish == 1) {
 					document.getElementById("rank").disabled = false;
 					document.getElementById("result").setAttribute("value", cnt);
